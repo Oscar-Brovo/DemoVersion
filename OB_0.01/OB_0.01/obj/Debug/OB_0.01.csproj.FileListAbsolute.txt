@@ -1,0 +1,30 @@
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\bin\Debug\OB_0.01.exe.config
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\bin\Debug\OB_0.01.exe
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\bin\Debug\OB_0.01.pdb
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csprojAssemblyReference.cache
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0._01.OBPage.resources
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0._01.Properties.Resources.resources
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csproj.GenerateResource.cache
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.exe
+C:\Users\Apprentice\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.pdb
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\bin\Debug\OB_0.01.exe.config
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\bin\Debug\OB_0.01.exe
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\bin\Debug\OB_0.01.pdb
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csprojAssemblyReference.cache
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0._01.Properties.Resources.resources
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csproj.GenerateResource.cache
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csproj.CoreCompileInputs.cache
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.exe
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0.01.pdb
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0._01.frmLogin.resources
+C:\Users\MasterSkunk\source\repos\OB_0.01\OB_0.01\obj\Debug\OB_0._01.frmMain.resources
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csprojAssemblyReference.cache
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0._01.Admin.resources
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0._01.frmLogin.resources
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0._01.frmMenu.resources
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0._01.frmMain.resources
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0._01.Properties.Resources.resources
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csproj.GenerateResource.cache
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0.01.csproj.CoreCompileInputs.cache
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0.01.exe
+C:\Users\Big Ben\Desktop\OB_0.01\OB_0.01\obj\Debug\OB_0.01.pdb
