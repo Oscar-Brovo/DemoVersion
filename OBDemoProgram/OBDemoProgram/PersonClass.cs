@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OB_0._01
+namespace OBDemoProgram
 {
    public class PersonClass
     {
+
+        #region Values
         private int iD;
         private string name;
         private string surname;
@@ -16,6 +18,9 @@ namespace OB_0._01
         private int rank;
 
         private List<PersonClass> loginList;
+        #endregion
+
+        #region constructor
         public PersonClass() { }
 
         public PersonClass(string username, string password)
@@ -40,7 +45,9 @@ namespace OB_0._01
             this.Password = password;
             this.Rank = rank;
         }
+        #endregion
 
+        #region properties
         public int ID { get => iD; set => iD = value; }
         public string Name { get => name; set => name = value; }
         public string Surname { get => surname; set => surname = value; }
@@ -48,6 +55,25 @@ namespace OB_0._01
         public string Password { get => password; set => password = value; }
         public int Rank { get => rank; set => rank = value; }
 
+        #endregion
+
+        #region Override 
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+        #endregion
+
+
+        #region Method
         public void PopulatingList() 
         {
             FileHandler fh = new FileHandler("Userfile.csv");
@@ -79,5 +105,6 @@ namespace OB_0._01
             }
             return false;
         }
+        #endregion
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OB_0._01
+namespace OBDemoProgram
 {
    public class SiteClass
     {

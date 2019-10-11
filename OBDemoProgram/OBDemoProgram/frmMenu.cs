@@ -12,6 +12,8 @@ namespace OBDemoProgram
 {
     public partial class frmMenu : Form
     {
+        public PersonClass personClass = new PersonClass();
+
         public frmMenu()
         {
             InitializeComponent();

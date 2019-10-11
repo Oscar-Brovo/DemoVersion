@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace OB_0._01
+namespace OBDemoProgram
 {
     public class FileHandler
     {

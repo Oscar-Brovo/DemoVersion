@@ -16,5 +16,28 @@ namespace OBDemoProgram
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string pass = txtPassword.Text;
+            
+            if(username != "" && pass != "")
+            {
+                PersonClass personClass = new PersonClass(username,pass);
+                personClass.PopulatingList();
+                if (personClass.LoginMethod())
+                {
+                    Form menuForm = new Form();
+                    menuForm.per
+                }
+                else
+                {
+                    MessageBox.Show("Password and Username doesn't match");
+                }
+
+            }
+
+        }
     }
 }

@@ -4,19 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OB_0._01
+namespace OBDemoProgram
 {
    public class OcurranceBookClass
     {
+        #region Values
         private string robDate; //Primary key.
         private string rob;
         private int ob;
         private int shifts;
         private string site;
         private string occurence;
-        private string notes;
+        private string notes; 
         private string officer;
         private DateTime dateAndTime;
+
+        #endregion
+
+        #region Constructors 
         public OcurranceBookClass() { }
         public OcurranceBookClass(string robDate, string rob, int ob, int shifts, string site, string occurence, string notes, string officer, DateTime dateAndTime)
         {
@@ -31,6 +36,9 @@ namespace OB_0._01
             this.DateAndTime = dateAndTime;
         }
 
+        #endregion
+        
+        #region Properties
         public string RobDate { get => robDate; set => robDate = value; }
         public string Rob { get => rob; set => rob = value; }
         public int Ob { get => ob; set => ob = value; }
@@ -40,5 +48,26 @@ namespace OB_0._01
         public string Notes { get => notes; set => notes = value; }
         public string Officer { get => officer; set => officer = value; }
         public DateTime DateAndTime { get => dateAndTime; set => dateAndTime = value; }
+        #endregion
+
+        #region Overrides
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+        #endregion
+
+        #region Methods
+
+        #endregion
     }
 }
