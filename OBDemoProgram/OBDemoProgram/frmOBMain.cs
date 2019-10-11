@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace OBDemoProgram
 {
-    public partial class frmOBList : Form
+    public partial class frmOBMain : Form
     {
-        public frmOBList()
+        public frmOBMain()
         {
             InitializeComponent();
         }
+
+        
     }
 }

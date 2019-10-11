@@ -1,6 +1,6 @@
 ﻿namespace OBDemoProgram
 {
-    partial class Form1
+    partial class frmOBList
     {
         /// <summary>
         /// Required designer variable.
