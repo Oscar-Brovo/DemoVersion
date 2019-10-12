@@ -28,8 +28,11 @@ namespace OBDemoProgram
                 personClass.PopulatingList();
                 if (personClass.LoginMethod())
                 {
-                    Form menuForm = new Form();
-                    menuForm.per
+                    frmMenu menuForm = new frmMenu();
+                    menuForm.personClass = personClass;
+                    menuForm.Show();
+                    menuForm.tempFrmHolder = (frmLogin)Form.ActiveForm;
+                    //this.Close();
                 }
                 else
                 {

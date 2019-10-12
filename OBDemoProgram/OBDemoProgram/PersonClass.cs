@@ -85,6 +85,7 @@ namespace OBDemoProgram
             {
                 string[] test = data.Split(',');
                 loginList.Add(new PersonClass(int.Parse(test[0]),test[1],test[2],test[3],test[4], int.Parse(test[5])));
+                // ID , Name , Surename , Username , password , rank
             }
             
             

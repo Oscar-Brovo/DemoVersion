@@ -8,3 +8,7 @@ E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug
 E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.csproj.CoreCompileInputs.cache
 E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.exe
 E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.pdb
+E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmAdminPanel.resources
+E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmOBList.resources
+E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmMenu.resources
+E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmOBMain.resources
