@@ -30,38 +30,55 @@
         {
             this.tcAdminPanel = new System.Windows.Forms.TabControl();
             this.tpAddOfficer = new System.Windows.Forms.TabPage();
+            this.btnRemoveOfficer = new System.Windows.Forms.Button();
+            this.btnLogOfficer = new System.Windows.Forms.Button();
+            this.btnClearOfficer = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lstOfficers = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtOfficerSurname = new System.Windows.Forms.TextBox();
+            this.txtOfficerName = new System.Windows.Forms.TextBox();
+            this.txtOfficerPSiRA = new System.Windows.Forms.TextBox();
             this.btnOfficerBack = new System.Windows.Forms.Button();
             this.tpAddEmployee = new System.Windows.Forms.TabPage();
-            this.btnEmployeeBack = new System.Windows.Forms.Button();
-            this.tpAddSite = new System.Windows.Forms.TabPage();
-            this.btnSiteBack = new System.Windows.Forms.Button();
-            this.txtOfficerPSiRA = new System.Windows.Forms.TextBox();
-            this.txtOfficerName = new System.Windows.Forms.TextBox();
-            this.txtOfficerSurname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEmployeeSurname = new System.Windows.Forms.TextBox();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
-            this.txtEmployeeID = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSiteClientName = new System.Windows.Forms.TextBox();
-            this.txtSiteName = new System.Windows.Forms.TextBox();
-            this.txtSiteCallSign = new System.Windows.Forms.TextBox();
+            this.cbAdmin = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEmployeeConPassword = new System.Windows.Forms.TextBox();
             this.txtEmployeePassword = new System.Windows.Forms.TextBox();
             this.txtEmployeeUsername = new System.Windows.Forms.TextBox();
-            this.cbAdmin = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmployeeSurname = new System.Windows.Forms.TextBox();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.btnEmployeeBack = new System.Windows.Forms.Button();
+            this.tpAddSite = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.txtSiteContactNumber = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtSiteClientName = new System.Windows.Forms.TextBox();
+            this.txtSiteName = new System.Windows.Forms.TextBox();
+            this.txtSiteCallSign = new System.Windows.Forms.TextBox();
+            this.btnSiteBack = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtOfficerConNum = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lstSitesList = new System.Windows.Forms.ListBox();
+            this.btnSiteClear = new System.Windows.Forms.Button();
+            this.btnSiteRemove = new System.Windows.Forms.Button();
+            this.btnSiteLog = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.tcAdminPanel.SuspendLayout();
             this.tpAddOfficer.SuspendLayout();
             this.tpAddEmployee.SuspendLayout();
@@ -82,6 +99,13 @@
             // 
             // tpAddOfficer
             // 
+            this.tpAddOfficer.Controls.Add(this.label15);
+            this.tpAddOfficer.Controls.Add(this.txtOfficerConNum);
+            this.tpAddOfficer.Controls.Add(this.btnRemoveOfficer);
+            this.tpAddOfficer.Controls.Add(this.btnLogOfficer);
+            this.tpAddOfficer.Controls.Add(this.btnClearOfficer);
+            this.tpAddOfficer.Controls.Add(this.label14);
+            this.tpAddOfficer.Controls.Add(this.lstOfficers);
             this.tpAddOfficer.Controls.Add(this.label3);
             this.tpAddOfficer.Controls.Add(this.label2);
             this.tpAddOfficer.Controls.Add(this.label1);
@@ -97,6 +121,104 @@
             this.tpAddOfficer.Text = "Add Officer";
             this.tpAddOfficer.UseVisualStyleBackColor = true;
             // 
+            // btnRemoveOfficer
+            // 
+            this.btnRemoveOfficer.Location = new System.Drawing.Point(454, 310);
+            this.btnRemoveOfficer.Name = "btnRemoveOfficer";
+            this.btnRemoveOfficer.Size = new System.Drawing.Size(124, 33);
+            this.btnRemoveOfficer.TabIndex = 17;
+            this.btnRemoveOfficer.Text = "Remove Officer";
+            this.btnRemoveOfficer.UseVisualStyleBackColor = true;
+            this.btnRemoveOfficer.Click += new System.EventHandler(this.btnRemoveOfficer_Click);
+            // 
+            // btnLogOfficer
+            // 
+            this.btnLogOfficer.Location = new System.Drawing.Point(454, 257);
+            this.btnLogOfficer.Name = "btnLogOfficer";
+            this.btnLogOfficer.Size = new System.Drawing.Size(124, 32);
+            this.btnLogOfficer.TabIndex = 16;
+            this.btnLogOfficer.Text = "Add New Officer";
+            this.btnLogOfficer.UseVisualStyleBackColor = true;
+            this.btnLogOfficer.Click += new System.EventHandler(this.btnLogOfficer_Click);
+            // 
+            // btnClearOfficer
+            // 
+            this.btnClearOfficer.Location = new System.Drawing.Point(454, 40);
+            this.btnClearOfficer.Name = "btnClearOfficer";
+            this.btnClearOfficer.Size = new System.Drawing.Size(306, 29);
+            this.btnClearOfficer.TabIndex = 15;
+            this.btnClearOfficer.Text = "Clear Fields and Selection";
+            this.btnClearOfficer.UseVisualStyleBackColor = true;
+            this.btnClearOfficer.Click += new System.EventHandler(this.btnClearOfficer_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(24, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(169, 20);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "List Of All Officers";
+            // 
+            // lstOfficers
+            // 
+            this.lstOfficers.FormattingEnabled = true;
+            this.lstOfficers.ItemHeight = 16;
+            this.lstOfficers.Location = new System.Drawing.Point(27, 40);
+            this.lstOfficers.Name = "lstOfficers";
+            this.lstOfficers.Size = new System.Drawing.Size(383, 500);
+            this.lstOfficers.TabIndex = 13;
+            this.lstOfficers.SelectedIndexChanged += new System.EventHandler(this.lstOfficers_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(451, 168);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 17);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Surname";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(451, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(451, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "PSiRA";
+            // 
+            // txtOfficerSurname
+            // 
+            this.txtOfficerSurname.Location = new System.Drawing.Point(570, 165);
+            this.txtOfficerSurname.Name = "txtOfficerSurname";
+            this.txtOfficerSurname.Size = new System.Drawing.Size(190, 22);
+            this.txtOfficerSurname.TabIndex = 9;
+            // 
+            // txtOfficerName
+            // 
+            this.txtOfficerName.Location = new System.Drawing.Point(570, 126);
+            this.txtOfficerName.Name = "txtOfficerName";
+            this.txtOfficerName.Size = new System.Drawing.Size(190, 22);
+            this.txtOfficerName.TabIndex = 8;
+            // 
+            // txtOfficerPSiRA
+            // 
+            this.txtOfficerPSiRA.Location = new System.Drawing.Point(570, 87);
+            this.txtOfficerPSiRA.Name = "txtOfficerPSiRA";
+            this.txtOfficerPSiRA.Size = new System.Drawing.Size(190, 22);
+            this.txtOfficerPSiRA.TabIndex = 7;
+            // 
             // btnOfficerBack
             // 
             this.btnOfficerBack.Location = new System.Drawing.Point(836, 516);
@@ -105,9 +227,15 @@
             this.btnOfficerBack.TabIndex = 0;
             this.btnOfficerBack.Text = "Back";
             this.btnOfficerBack.UseVisualStyleBackColor = true;
+            this.btnOfficerBack.Click += new System.EventHandler(this.btnOfficerBack_Click);
             // 
             // tpAddEmployee
             // 
+            this.tpAddEmployee.Controls.Add(this.button5);
+            this.tpAddEmployee.Controls.Add(this.button6);
+            this.tpAddEmployee.Controls.Add(this.button4);
+            this.tpAddEmployee.Controls.Add(this.label17);
+            this.tpAddEmployee.Controls.Add(this.listBox2);
             this.tpAddEmployee.Controls.Add(this.cbAdmin);
             this.tpAddEmployee.Controls.Add(this.label10);
             this.tpAddEmployee.Controls.Add(this.label11);
@@ -130,6 +258,112 @@
             this.tpAddEmployee.Text = "Add Employee";
             this.tpAddEmployee.UseVisualStyleBackColor = true;
             // 
+            // cbAdmin
+            // 
+            this.cbAdmin.AutoSize = true;
+            this.cbAdmin.Location = new System.Drawing.Point(437, 343);
+            this.cbAdmin.Name = "cbAdmin";
+            this.cbAdmin.Size = new System.Drawing.Size(69, 21);
+            this.cbAdmin.TabIndex = 19;
+            this.cbAdmin.Text = "Admin";
+            this.cbAdmin.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(433, 307);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(121, 17);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Confirm Password";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(433, 257);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 17);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(433, 209);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 17);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Username";
+            // 
+            // txtEmployeeConPassword
+            // 
+            this.txtEmployeeConPassword.Location = new System.Drawing.Point(564, 304);
+            this.txtEmployeeConPassword.Name = "txtEmployeeConPassword";
+            this.txtEmployeeConPassword.Size = new System.Drawing.Size(178, 22);
+            this.txtEmployeeConPassword.TabIndex = 15;
+            // 
+            // txtEmployeePassword
+            // 
+            this.txtEmployeePassword.Location = new System.Drawing.Point(564, 257);
+            this.txtEmployeePassword.Name = "txtEmployeePassword";
+            this.txtEmployeePassword.Size = new System.Drawing.Size(178, 22);
+            this.txtEmployeePassword.TabIndex = 14;
+            // 
+            // txtEmployeeUsername
+            // 
+            this.txtEmployeeUsername.Location = new System.Drawing.Point(564, 209);
+            this.txtEmployeeUsername.Name = "txtEmployeeUsername";
+            this.txtEmployeeUsername.Size = new System.Drawing.Size(178, 22);
+            this.txtEmployeeUsername.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(433, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Surename";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(433, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(433, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "ID";
+            // 
+            // txtEmployeeSurname
+            // 
+            this.txtEmployeeSurname.Location = new System.Drawing.Point(564, 160);
+            this.txtEmployeeSurname.Name = "txtEmployeeSurname";
+            this.txtEmployeeSurname.Size = new System.Drawing.Size(178, 22);
+            this.txtEmployeeSurname.TabIndex = 9;
+            // 
+            // txtEmployeeName
+            // 
+            this.txtEmployeeName.Location = new System.Drawing.Point(564, 118);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(178, 22);
+            this.txtEmployeeName.TabIndex = 8;
+            // 
+            // txtEmployeeID
+            // 
+            this.txtEmployeeID.Location = new System.Drawing.Point(564, 76);
+            this.txtEmployeeID.Name = "txtEmployeeID";
+            this.txtEmployeeID.Size = new System.Drawing.Size(178, 22);
+            this.txtEmployeeID.TabIndex = 7;
+            // 
             // btnEmployeeBack
             // 
             this.btnEmployeeBack.Location = new System.Drawing.Point(836, 516);
@@ -141,6 +375,11 @@
             // 
             // tpAddSite
             // 
+            this.tpAddSite.Controls.Add(this.btnSiteRemove);
+            this.tpAddSite.Controls.Add(this.btnSiteLog);
+            this.tpAddSite.Controls.Add(this.btnSiteClear);
+            this.tpAddSite.Controls.Add(this.label16);
+            this.tpAddSite.Controls.Add(this.lstSitesList);
             this.tpAddSite.Controls.Add(this.label13);
             this.tpAddSite.Controls.Add(this.txtSiteContactNumber);
             this.tpAddSite.Controls.Add(this.label7);
@@ -157,6 +396,70 @@
             this.tpAddSite.Text = "Add Site";
             this.tpAddSite.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(450, 208);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 17);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Contact Number";
+            // 
+            // txtSiteContactNumber
+            // 
+            this.txtSiteContactNumber.Location = new System.Drawing.Point(569, 205);
+            this.txtSiteContactNumber.Name = "txtSiteContactNumber";
+            this.txtSiteContactNumber.Size = new System.Drawing.Size(190, 22);
+            this.txtSiteContactNumber.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(450, 168);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Client Name";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(450, 123);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 17);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Site Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(450, 85);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 17);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Call Sign";
+            // 
+            // txtSiteClientName
+            // 
+            this.txtSiteClientName.Location = new System.Drawing.Point(569, 165);
+            this.txtSiteClientName.Name = "txtSiteClientName";
+            this.txtSiteClientName.Size = new System.Drawing.Size(190, 22);
+            this.txtSiteClientName.TabIndex = 9;
+            // 
+            // txtSiteName
+            // 
+            this.txtSiteName.Location = new System.Drawing.Point(569, 123);
+            this.txtSiteName.Name = "txtSiteName";
+            this.txtSiteName.Size = new System.Drawing.Size(190, 22);
+            this.txtSiteName.TabIndex = 8;
+            // 
+            // txtSiteCallSign
+            // 
+            this.txtSiteCallSign.Location = new System.Drawing.Point(569, 85);
+            this.txtSiteCallSign.Name = "txtSiteCallSign";
+            this.txtSiteCallSign.Size = new System.Drawing.Size(190, 22);
+            this.txtSiteCallSign.TabIndex = 7;
+            // 
             // btnSiteBack
             // 
             this.btnSiteBack.Location = new System.Drawing.Point(836, 516);
@@ -166,223 +469,114 @@
             this.btnSiteBack.Text = "Back";
             this.btnSiteBack.UseVisualStyleBackColor = true;
             // 
-            // txtOfficerPSiRA
+            // label15
             // 
-            this.txtOfficerPSiRA.Location = new System.Drawing.Point(175, 51);
-            this.txtOfficerPSiRA.Name = "txtOfficerPSiRA";
-            this.txtOfficerPSiRA.Size = new System.Drawing.Size(100, 22);
-            this.txtOfficerPSiRA.TabIndex = 1;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(451, 209);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 17);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Contact Number";
             // 
-            // txtOfficerName
+            // txtOfficerConNum
             // 
-            this.txtOfficerName.Location = new System.Drawing.Point(175, 90);
-            this.txtOfficerName.Name = "txtOfficerName";
-            this.txtOfficerName.Size = new System.Drawing.Size(100, 22);
-            this.txtOfficerName.TabIndex = 2;
+            this.txtOfficerConNum.Location = new System.Drawing.Point(570, 206);
+            this.txtOfficerConNum.Name = "txtOfficerConNum";
+            this.txtOfficerConNum.Size = new System.Drawing.Size(190, 22);
+            this.txtOfficerConNum.TabIndex = 18;
             // 
-            // txtOfficerSurname
+            // label16
             // 
-            this.txtOfficerSurname.Location = new System.Drawing.Point(175, 129);
-            this.txtOfficerSurname.Name = "txtOfficerSurname";
-            this.txtOfficerSurname.Size = new System.Drawing.Size(100, 22);
-            this.txtOfficerSurname.TabIndex = 3;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(8, 15);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(144, 20);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "List Of All Sites";
             // 
-            // label1
+            // lstSitesList
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "PSiRA";
+            this.lstSitesList.FormattingEnabled = true;
+            this.lstSitesList.ItemHeight = 16;
+            this.lstSitesList.Location = new System.Drawing.Point(11, 35);
+            this.lstSitesList.Name = "lstSitesList";
+            this.lstSitesList.Size = new System.Drawing.Size(383, 500);
+            this.lstSitesList.TabIndex = 15;
             // 
-            // label2
+            // btnSiteClear
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Name";
+            this.btnSiteClear.Location = new System.Drawing.Point(453, 35);
+            this.btnSiteClear.Name = "btnSiteClear";
+            this.btnSiteClear.Size = new System.Drawing.Size(306, 29);
+            this.btnSiteClear.TabIndex = 17;
+            this.btnSiteClear.Text = "Clear Fields and Selection";
+            this.btnSiteClear.UseVisualStyleBackColor = true;
+            this.btnSiteClear.Click += new System.EventHandler(this.btnSiteClear_Click);
             // 
-            // label3
+            // btnSiteRemove
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Surname";
+            this.btnSiteRemove.Location = new System.Drawing.Point(453, 310);
+            this.btnSiteRemove.Name = "btnSiteRemove";
+            this.btnSiteRemove.Size = new System.Drawing.Size(124, 33);
+            this.btnSiteRemove.TabIndex = 19;
+            this.btnSiteRemove.Text = "Remove Site";
+            this.btnSiteRemove.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // btnSiteLog
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Surename";
+            this.btnSiteLog.Location = new System.Drawing.Point(453, 257);
+            this.btnSiteLog.Name = "btnSiteLog";
+            this.btnSiteLog.Size = new System.Drawing.Size(124, 32);
+            this.btnSiteLog.TabIndex = 18;
+            this.btnSiteLog.Text = "Add New Site";
+            this.btnSiteLog.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // label17
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 17);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Name";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(15, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(169, 20);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "List Of All Officers";
             // 
-            // label6
+            // listBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "ID";
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(18, 32);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(383, 500);
+            this.listBox2.TabIndex = 20;
             // 
-            // txtEmployeeSurname
+            // button4
             // 
-            this.txtEmployeeSurname.Location = new System.Drawing.Point(177, 133);
-            this.txtEmployeeSurname.Name = "txtEmployeeSurname";
-            this.txtEmployeeSurname.Size = new System.Drawing.Size(100, 22);
-            this.txtEmployeeSurname.TabIndex = 9;
+            this.button4.Location = new System.Drawing.Point(436, 32);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(306, 29);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Clear Fields and Selection";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // txtEmployeeName
+            // button5
             // 
-            this.txtEmployeeName.Location = new System.Drawing.Point(177, 91);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(100, 22);
-            this.txtEmployeeName.TabIndex = 8;
+            this.button5.Location = new System.Drawing.Point(436, 434);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(124, 33);
+            this.button5.TabIndex = 24;
+            this.button5.Text = "Remove Officer";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // txtEmployeeID
+            // button6
             // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(177, 49);
-            this.txtEmployeeID.Name = "txtEmployeeID";
-            this.txtEmployeeID.Size = new System.Drawing.Size(100, 22);
-            this.txtEmployeeID.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(55, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Client Name";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(55, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 17);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Site Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(55, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 17);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Call Sign";
-            // 
-            // txtSiteClientName
-            // 
-            this.txtSiteClientName.Location = new System.Drawing.Point(174, 130);
-            this.txtSiteClientName.Name = "txtSiteClientName";
-            this.txtSiteClientName.Size = new System.Drawing.Size(100, 22);
-            this.txtSiteClientName.TabIndex = 9;
-            // 
-            // txtSiteName
-            // 
-            this.txtSiteName.Location = new System.Drawing.Point(174, 88);
-            this.txtSiteName.Name = "txtSiteName";
-            this.txtSiteName.Size = new System.Drawing.Size(100, 22);
-            this.txtSiteName.TabIndex = 8;
-            // 
-            // txtSiteCallSign
-            // 
-            this.txtSiteCallSign.Location = new System.Drawing.Point(174, 50);
-            this.txtSiteCallSign.Name = "txtSiteCallSign";
-            this.txtSiteCallSign.Size = new System.Drawing.Size(100, 22);
-            this.txtSiteCallSign.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(46, 280);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 17);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Confirm Password";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(46, 230);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 17);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Password";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(46, 182);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 17);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Username";
-            // 
-            // txtEmployeeConPassword
-            // 
-            this.txtEmployeeConPassword.Location = new System.Drawing.Point(177, 277);
-            this.txtEmployeeConPassword.Name = "txtEmployeeConPassword";
-            this.txtEmployeeConPassword.Size = new System.Drawing.Size(100, 22);
-            this.txtEmployeeConPassword.TabIndex = 15;
-            // 
-            // txtEmployeePassword
-            // 
-            this.txtEmployeePassword.Location = new System.Drawing.Point(177, 230);
-            this.txtEmployeePassword.Name = "txtEmployeePassword";
-            this.txtEmployeePassword.Size = new System.Drawing.Size(100, 22);
-            this.txtEmployeePassword.TabIndex = 14;
-            // 
-            // txtEmployeeUsername
-            // 
-            this.txtEmployeeUsername.Location = new System.Drawing.Point(177, 182);
-            this.txtEmployeeUsername.Name = "txtEmployeeUsername";
-            this.txtEmployeeUsername.Size = new System.Drawing.Size(100, 22);
-            this.txtEmployeeUsername.TabIndex = 13;
-            // 
-            // cbAdmin
-            // 
-            this.cbAdmin.AutoSize = true;
-            this.cbAdmin.Location = new System.Drawing.Point(138, 329);
-            this.cbAdmin.Name = "cbAdmin";
-            this.cbAdmin.Size = new System.Drawing.Size(69, 21);
-            this.cbAdmin.TabIndex = 19;
-            this.cbAdmin.Text = "Admin";
-            this.cbAdmin.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(55, 173);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 17);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Contact Number";
-            // 
-            // txtSiteContactNumber
-            // 
-            this.txtSiteContactNumber.Location = new System.Drawing.Point(174, 170);
-            this.txtSiteContactNumber.Name = "txtSiteContactNumber";
-            this.txtSiteContactNumber.Size = new System.Drawing.Size(100, 22);
-            this.txtSiteContactNumber.TabIndex = 13;
+            this.button6.Location = new System.Drawing.Point(436, 381);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(124, 32);
+            this.button6.TabIndex = 23;
+            this.button6.Text = "Add New Officer";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // frmAdminPanel
             // 
@@ -392,6 +586,7 @@
             this.Controls.Add(this.tcAdminPanel);
             this.Name = "frmAdminPanel";
             this.Text = "frmAdminPanel";
+            this.Load += new System.EventHandler(this.frmAdminPanel_Load);
             this.tcAdminPanel.ResumeLayout(false);
             this.tpAddOfficer.ResumeLayout(false);
             this.tpAddOfficer.PerformLayout();
@@ -412,12 +607,6 @@
         private System.Windows.Forms.Button btnEmployeeBack;
         private System.Windows.Forms.TabPage tpAddSite;
         private System.Windows.Forms.Button btnSiteBack;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtOfficerSurname;
-        private System.Windows.Forms.TextBox txtOfficerName;
-        private System.Windows.Forms.TextBox txtOfficerPSiRA;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -439,5 +628,28 @@
         private System.Windows.Forms.TextBox txtEmployeeUsername;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtSiteContactNumber;
+        private System.Windows.Forms.ListBox lstOfficers;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtOfficerSurname;
+        private System.Windows.Forms.TextBox txtOfficerName;
+        private System.Windows.Forms.TextBox txtOfficerPSiRA;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnRemoveOfficer;
+        private System.Windows.Forms.Button btnLogOfficer;
+        private System.Windows.Forms.Button btnClearOfficer;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtOfficerConNum;
+        private System.Windows.Forms.Button btnSiteClear;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ListBox lstSitesList;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button btnSiteRemove;
+        private System.Windows.Forms.Button btnSiteLog;
     }
 }

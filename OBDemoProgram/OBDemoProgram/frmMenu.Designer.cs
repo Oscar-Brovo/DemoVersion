@@ -43,6 +43,7 @@
             this.btnNewOB.TabIndex = 0;
             this.btnNewOB.Text = "New  OB";
             this.btnNewOB.UseVisualStyleBackColor = true;
+            this.btnNewOB.Click += new System.EventHandler(this.btnNewOB_Click);
             // 
             // btnOBList
             // 
@@ -63,6 +64,7 @@
             this.btnAdminPanel.TabIndex = 2;
             this.btnAdminPanel.Text = "Admin Panel";
             this.btnAdminPanel.UseVisualStyleBackColor = true;
+            this.btnAdminPanel.Click += new System.EventHandler(this.btnAdminPanel_Click);
             // 
             // btnLogOut
             // 

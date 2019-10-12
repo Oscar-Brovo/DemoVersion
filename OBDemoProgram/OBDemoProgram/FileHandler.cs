@@ -22,7 +22,7 @@ namespace OBDemoProgram
             {
                 if (File.Exists(this.filePath))
                 {
-                    stream = new FileStream(this.filePath, FileMode.Open, FileAccess.Write);
+                    stream = new FileStream(this.filePath, FileMode.Append, FileAccess.Write);
                 }
                 else
                 {
@@ -50,9 +50,41 @@ namespace OBDemoProgram
                 stream.Close();
             }
 
+        }
 
-           
-            
+        public void RewriteDataToTXT(List<string> dataToWrite)
+        {
+
+            try
+            {
+               
+                    stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
+                
+
+                writer = new StreamWriter(stream);
+
+                foreach (string itemToWrite in dataToWrite)
+                {
+
+                    writer.WriteLine(itemToWrite);
+
+                    writer.Flush();
+                }
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                writer.Close();
+                stream.Close();
+            }
+
+
+
+
 
         }
 

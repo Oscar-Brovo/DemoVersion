@@ -12,7 +12,7 @@ namespace OBDemoProgram
 {
     public partial class frmMenu : Form
     {
-        public PersonClass personClass = new PersonClass();
+        public PersonClass personClassMenu = new PersonClass();
         public frmLogin tempFrmHolder;
 
         public frmMenu()
@@ -22,7 +22,7 @@ namespace OBDemoProgram
 
         public void RankExecution()
         {
-            switch (personClass.Rank)
+            switch (personClassMenu.Rank)
             {
                 case 0:
                     {
@@ -40,7 +40,6 @@ namespace OBDemoProgram
                     break;
                 case 2:
                     {
-
                         tempFrmHolder.Hide();
                     }
                     break;
@@ -53,6 +52,19 @@ namespace OBDemoProgram
         {
             tempFrmHolder.Show();
             this.Close();
+        }
+
+        private void btnNewOB_Click(object sender, EventArgs e)
+        {
+            frmOBMain frmOB = new frmOBMain();
+        }
+
+        private void btnAdminPanel_Click(object sender, EventArgs e)
+        {
+            frmAdminPanel frmAdmin = new frmAdminPanel();
+            frmAdmin.personClassAdminForm = personClassMenu;
+            frmAdmin.Show();
+
         }
     }
 }

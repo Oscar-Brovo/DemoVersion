@@ -29,7 +29,7 @@ namespace OBDemoProgram
                 if (personClass.LoginMethod())
                 {
                     frmMenu menuForm = new frmMenu();
-                    menuForm.personClass = personClass;
+                    menuForm.personClassMenu = personClass;
                     menuForm.tempFrmHolder = (frmLogin)Form.ActiveForm;
                     menuForm.Show();
                     menuForm.RankExecution();

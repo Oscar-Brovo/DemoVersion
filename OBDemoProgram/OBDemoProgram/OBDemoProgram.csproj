@@ -78,6 +78,7 @@
       <DependentUpon>frmOBMain.cs</DependentUpon>
     </Compile>
     <Compile Include="OcurranceBookClass.cs" />
+    <Compile Include="OfficerClass.cs" />
     <Compile Include="PersonClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

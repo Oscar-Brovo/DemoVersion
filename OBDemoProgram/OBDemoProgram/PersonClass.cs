@@ -10,7 +10,7 @@ namespace OBDemoProgram
     {
 
         #region Values
-        private int iD;
+        private string pSiRA;
         private string name;
         private string surname;
         private string username;
@@ -29,16 +29,16 @@ namespace OBDemoProgram
             this.password = password;
         }
 
-        public PersonClass(int iD, string name, string surname)
+        public PersonClass(string pSiRA, string name, string surname)
         {
-            this.iD = iD;
+            this.pSiRA = pSiRA;
             this.name = name;
             this.surname = surname;
         }
 
-        public PersonClass(int iD, string name, string surname, string username, string password, int rank)
+        public PersonClass(string pSiRA, string name, string surname, string username, string password, int rank)
         {
-            this.ID = iD;
+            this.PSiRA = pSiRA;
             this.Name = name;
             this.Surname = surname;
             this.Username = username;
@@ -48,7 +48,7 @@ namespace OBDemoProgram
         #endregion
 
         #region properties
-        public int ID { get => iD; set => iD = value; }
+        public string PSiRA { get => pSiRA; set => pSiRA = value; }
         public string Name { get => name; set => name = value; }
         public string Surname { get => surname; set => surname = value; }
         public string Username { get => username; set => username = value; }
@@ -68,13 +68,13 @@ namespace OBDemoProgram
         }
         public override string ToString()
         {
-            return base.ToString();
+            return string.Format(pSiRA+": "+name+" "+surname );
         }
         #endregion
 
 
         #region Method
-        public void PopulatingList() 
+        public void PopulatingList()
         {
             FileHandler fh = new FileHandler("Userfile.csv");
             List<string> theList = fh.ReadDataFromTXT();
@@ -84,11 +84,11 @@ namespace OBDemoProgram
             foreach (string data in theList)
             {
                 string[] test = data.Split(',');
-                loginList.Add(new PersonClass(int.Parse(test[0]),test[1],test[2],test[3],test[4], int.Parse(test[5])));
-                // ID , Name , Surename , Username , password , rank
+                loginList.Add(new PersonClass(test[0], test[1], test[2], test[3], test[4], int.Parse(test[5])));
+                // pSiRA , Name , Surename , Username , password , rank
             }
-            
-            
+
+
         }
         public bool LoginMethod()
         {
@@ -99,13 +99,14 @@ namespace OBDemoProgram
                     name = loginList[i].Name;
                     surname = loginList[i].Surname;
                     rank = loginList[i].Rank;
-                    iD = loginList[i].ID;
+                    pSiRA = loginList[i].PSiRA;
                     return true;
-                }   
+                }
 
             }
             return false;
         }
+
         #endregion
     }
 }
