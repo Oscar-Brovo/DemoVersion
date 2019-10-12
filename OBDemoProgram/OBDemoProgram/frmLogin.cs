@@ -30,15 +30,19 @@ namespace OBDemoProgram
                 {
                     frmMenu menuForm = new frmMenu();
                     menuForm.personClass = personClass;
-                    menuForm.Show();
                     menuForm.tempFrmHolder = (frmLogin)Form.ActiveForm;
-                    //this.Close();
+                    menuForm.Show();
+                    menuForm.RankExecution();
                 }
                 else
                 {
                     MessageBox.Show("Password and Username doesn't match");
                 }
 
+            }
+            else
+            {
+                MessageBox.Show("Please leave no fields empty");
             }
 
         }

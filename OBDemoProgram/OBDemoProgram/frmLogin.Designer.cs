@@ -52,6 +52,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(217, 22);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.Text = "LFH1234";
             // 
             // txtPassword
             // 
@@ -59,6 +60,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(214, 22);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.Text = "chara1234";
             // 
             // label2
             // 
