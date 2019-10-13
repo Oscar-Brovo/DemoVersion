@@ -58,7 +58,7 @@ namespace OBDemoProgram
             try
             {
                
-                    stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
+                stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
                 
 
                 writer = new StreamWriter(stream);
@@ -102,17 +102,21 @@ namespace OBDemoProgram
                     {
                         dataRaw.Add(reader.ReadLine());
                     }
+
+                    
                 }
                 else
                 {
-                    stream = new FileStream("Problem.txt", FileMode.Open, FileAccess.Read);
-                    reader = new StreamReader(stream);
+                    
+                   stream = new FileStream("Problem.txt", FileMode.Open, FileAccess.Read);
+                   reader = new StreamReader(stream);
+                 
                 }
             }
             catch (System.Exception)
             {
 
-                throw;
+                return null;
             }
             finally
             {

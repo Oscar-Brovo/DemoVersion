@@ -108,8 +108,6 @@ namespace OBDemoProgram
             return false;
         }
 
-
-
         public List<PersonClass> GetPersonData()
         {
             personList = new List<PersonClass>();
@@ -182,6 +180,7 @@ namespace OBDemoProgram
             }
             return true;
         }
+
         public bool UpdatePersonToDatabase()
         {
             try

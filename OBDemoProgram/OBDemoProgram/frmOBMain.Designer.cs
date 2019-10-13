@@ -188,6 +188,7 @@
             // 
             // txtTime
             // 
+            this.txtTime.Enabled = false;
             this.txtTime.Location = new System.Drawing.Point(788, 92);
             this.txtTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtTime.Name = "txtTime";
@@ -281,9 +282,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(966, 444);
+            this.btnBack.Location = new System.Drawing.Point(939, 422);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(87, 31);
+            this.btnBack.Size = new System.Drawing.Size(114, 53);
             this.btnBack.TabIndex = 37;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -336,6 +337,7 @@
             this.Controls.Add(this.lbloccurencepage);
             this.Name = "frmOBMain";
             this.Text = "frmOBMain";
+            this.Load += new System.EventHandler(this.frmOBMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -14,20 +14,27 @@ namespace OBDemoProgram
     {
         public frmMenu menu;
         public PersonClass personClassAdminForm;
+        public OcurranceBookClass OBEntry;
 
         public frmOBMain()
         {
             InitializeComponent();
         }
 
-        public int GetReturnOBNumber()
+        private void frmOBMain_Load(object sender, EventArgs e)
         {
-            return 1;
+            OBEntry = new OcurranceBookClass();
+            OBEntry.PopulateOBList();
+            lblReturnOBnumber.Text = OBEntry.GetNewReturnOBNumber();
+
+            txtTime.Text = DateTime.Now.ToString("h:mm:ss tt");
         }
 
         private void btnLogEntry_Click(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

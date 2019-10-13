@@ -16,14 +16,15 @@ namespace OBDemoProgram
         private string site;
         private string occurence;
         private string notes; 
-        private string officer;
-        private DateTime dateAndTime;
+        private string  officer;
+        private string dateAndTime;
 
+        private List<OcurranceBookClass> obList = new List<OcurranceBookClass>();
         #endregion
 
         #region Constructors 
         public OcurranceBookClass() { }
-        public OcurranceBookClass(string robDate, string rob, int ob, int shifts, string site, string occurence, string notes, string officer, DateTime dateAndTime)
+        public OcurranceBookClass(string robDate, string rob, int ob, int shifts, string site, string occurence, string notes, string officer, string dateAndTime)
         {
             this.RobDate = robDate;
             this.Rob = rob;
@@ -47,7 +48,7 @@ namespace OBDemoProgram
         public string Occurence { get => occurence; set => occurence = value; }
         public string Notes { get => notes; set => notes = value; }
         public string Officer { get => officer; set => officer = value; }
-        public DateTime DateAndTime { get => dateAndTime; set => dateAndTime = value; }
+        public string DateAndTime { get => dateAndTime; set => dateAndTime = value; }
         #endregion
 
         #region Overrides
@@ -67,6 +68,55 @@ namespace OBDemoProgram
         #endregion
 
         #region Methods
+
+        public void PopulateOBList()
+        {
+            obList = new List<OcurranceBookClass>();
+            FileHandler fh = new FileHandler("OBList.csv");
+            List<string> theList = fh.ReadDataFromTXT();
+            if (theList!=null)
+            {
+                foreach (string data in theList)
+                {
+                    if (data != "")
+                    {
+                        string[] line = data.Split(',');
+                        obList.Add(new OcurranceBookClass(line[0], line[1], int.Parse(line[2]), int.Parse(line[3]), line[4], line[5], line[6], line[7], line[8]));
+                        
+                    }
+                }
+            }
+            
+        }
+
+        public string GetNewReturnOBNumber()
+        {
+            if (obList == null)
+            {
+                return "1";
+            }
+            else
+            {
+                return (int.Parse(obList[obList.Count - 1].Rob)+1).ToString();
+            }
+        }
+
+        public bool DoesOBEntryExist()
+        {
+            bool flag = false;
+            if (obList != null)
+            {
+                for (int i = 0; i < obList.Count; i++)
+                {
+                    if (obList[i].RobDate.Equals(robDate))
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
 
         #endregion
     }
