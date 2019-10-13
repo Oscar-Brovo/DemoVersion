@@ -18,6 +18,7 @@ namespace OBDemoProgram
         private int rank;
 
         private List<PersonClass> loginList;
+        private List<PersonClass> personList;
         #endregion
 
         #region constructor
@@ -105,6 +106,146 @@ namespace OBDemoProgram
 
             }
             return false;
+        }
+
+
+
+        public List<PersonClass> GetPersonData()
+        {
+            personList = new List<PersonClass>();
+            FileHandler fh = new FileHandler("Userfile.csv");
+            List<string> theList = fh.ReadDataFromTXT();
+            foreach (string data in theList)
+            {
+                if (data != "")
+                {
+                    string[] line = data.Split(',');
+                    personList.Add(new PersonClass(line[0], line[1], line[2], line[3], line[4], int.Parse(line[5])));
+                    // pSiRA , Name , Surename, username, password, rank
+                }
+            }
+
+            return personList;
+        }
+
+        public bool DoesPersonExsit()
+        {
+            int index = 0;
+            while (index < personList.Count)
+            {
+                if (personList[index].PSiRA.Equals(pSiRA) && personList[index].Rank != 0 )
+                {
+                    return true;
+                }
+                index++;
+            }
+            return false;
+        }
+
+        public bool AddPersonToDatabase()
+        {
+            try
+            {
+                bool addUser = false;
+                FileHandler fh = new FileHandler("Userfile.csv");
+                for (int i = 0; i < personList.Count; i++)
+                {
+                    if (personList[i].PSiRA.Equals(pSiRA))
+                    {
+                        personList[i].Name = name;
+                        personList[i].Surname = surname;
+                        personList[i].Username = username;
+                        personList[i].Password = password;
+                        personList[i].Rank = rank;
+                        addUser = true;
+                        List<string> theList = new List<string>();
+                        foreach (PersonClass item in personList)
+                        {
+                            theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.Username + "," + item.Password + "," + item.Rank);
+                        }
+
+                        fh.RewriteDataToTXT(theList);
+                        break;
+                    }
+                }
+                if (!addUser)
+                {
+                    List<string> thelist = new List<string>() { pSiRA + "," + name + "," + surname + "," + username + "," + password + "," + rank };
+                    fh.WriteDataToTXT(thelist);
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+        public bool UpdatePersonToDatabase()
+        {
+            try
+            {
+                FileHandler fh = new FileHandler("Userfile.csv");
+                for (int i = 0; i < personList.Count; i++)
+                {
+                    if (personList[i].PSiRA.Equals(pSiRA))
+                    {
+                        personList[i].Name = name;
+                        personList[i].Surname = surname;
+                        personList[i].Username = username;
+                        personList[i].Password = password;
+                        personList[i].Rank = rank;
+                        break;
+                    }
+                }
+
+                List<string> theList = new List<string>();
+                foreach (PersonClass item in personList)
+                {
+                    theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.Username + "," + item.Password + "," + item.Rank);
+                }
+
+                fh.RewriteDataToTXT(theList);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool RemovePerson()
+        {
+            try
+            {
+                FileHandler fh = new FileHandler("Userfile.csv");
+                int index = 0;
+                while (index < personList.Count)
+                {
+                    if (personList[index].PSiRA.Equals(pSiRA))
+                    {
+                        break;
+                    }
+                    index++;
+                }
+                personList[index].Rank = 0;
+
+                List<string> theList = new List<string>();
+                foreach (PersonClass item in personList)
+                {
+                    theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.Username + "," + item.Password + "," + item.Rank);
+                }
+
+                fh.RewriteDataToTXT(theList);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+            return true;
         }
 
         #endregion

@@ -33,15 +33,11 @@ namespace OBDemoProgram
 
         public override string ToString()
         {
-            return base.ToString();
-            {
-                return string.Format(callsighn + ": " + siteName);
-            }
+            return string.Format(callsighn + ": " + siteName);
         }
 
         #region Methods
-
-
+        
         public List<SiteClass> GetSiteData()
         {
             siteList = new List<SiteClass>();
@@ -113,7 +109,8 @@ namespace OBDemoProgram
             }
             return true;
         }
-        public bool UpdateOfficerToDatabase()
+
+        public bool UpdateSiteToDatabase()
         {
             try
             {
@@ -145,7 +142,7 @@ namespace OBDemoProgram
             return true;
         }
 
-        public bool RemoveOfficer()
+        public bool RemoveSite()
         {
             try
             {
