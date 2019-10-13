@@ -17,6 +17,7 @@ namespace OBDemoProgram
         public OfficerClass officerClass = new OfficerClass();
         public SiteClass siteClass = new SiteClass();
         public PersonClass personClass = new PersonClass();
+        public frmMenu menu;
 
         public frmAdminPanel()
         {
@@ -203,8 +204,8 @@ namespace OBDemoProgram
 
         private void btnOfficerBack_Click(object sender, EventArgs e)
         {
-            // frmMenu menu = 
-            Environment.Exit(0);
+            menu.Show();
+            this.Close();
         }
 
         #endregion
@@ -337,7 +338,8 @@ namespace OBDemoProgram
 
         private void btnSiteBack_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            menu.Show();
+            this.Close();
         }
 
 
@@ -503,7 +505,8 @@ namespace OBDemoProgram
 
         private void btnPersonBack_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            menu.Show();
+            this.Close();
         }
 
         #endregion

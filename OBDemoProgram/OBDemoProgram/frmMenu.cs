@@ -57,13 +57,23 @@ namespace OBDemoProgram
         private void btnNewOB_Click(object sender, EventArgs e)
         {
             frmOBMain frmOB = new frmOBMain();
+            frmOB.menu = (frmMenu)Form.ActiveForm;
+            frmOB.Show();
+            this.Hide();
         }
 
         private void btnAdminPanel_Click(object sender, EventArgs e)
         {
             frmAdminPanel frmAdmin = new frmAdminPanel();
             frmAdmin.personClassAdminForm = personClassMenu;
+            frmAdmin.menu = (frmMenu)Form.ActiveForm;
             frmAdmin.Show();
+            this.Hide();
+
+        }
+
+        private void btnOBList_Click(object sender, EventArgs e)
+        {
 
         }
     }

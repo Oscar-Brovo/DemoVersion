@@ -54,6 +54,7 @@
             this.btnOBList.TabIndex = 1;
             this.btnOBList.Text = "OB List";
             this.btnOBList.UseVisualStyleBackColor = true;
+            this.btnOBList.Click += new System.EventHandler(this.btnOBList_Click);
             // 
             // btnAdminPanel
             // 

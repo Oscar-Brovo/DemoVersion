@@ -277,6 +277,7 @@
             this.btnLogEntry.TabIndex = 36;
             this.btnLogEntry.Text = "Log Entry";
             this.btnLogEntry.UseVisualStyleBackColor = true;
+            this.btnLogEntry.Click += new System.EventHandler(this.btnLogEntry_Click);
             // 
             // btnBack
             // 

@@ -12,6 +12,9 @@ namespace OBDemoProgram
 {
     public partial class frmOBList : Form
     {
+        public frmMenu menu;
+        public PersonClass personClassAdminForm;
+
         public frmOBList()
         {
             InitializeComponent();
