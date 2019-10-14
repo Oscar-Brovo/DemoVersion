@@ -24,10 +24,13 @@ namespace OBDemoProgram
         private void frmOBMain_Load(object sender, EventArgs e)
         {
             OBEntry = new OcurranceBookClass();
+            SiteClass site = new SiteClass();
             OBEntry.PopulateOBList();
             lblReturnOBnumber.Text = OBEntry.GetNewReturnOBNumber();
 
             txtTime.Text = DateTime.Now.ToString("h:mm:ss tt");
+            cmbSite.DataSource = site.GetSiteData();
+
         }
 
         public string converDate(string dateGiven)
