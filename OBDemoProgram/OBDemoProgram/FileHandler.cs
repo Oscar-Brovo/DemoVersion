@@ -107,10 +107,11 @@ namespace OBDemoProgram
                 }
                 else
                 {
-                    
-                   stream = new FileStream("Problem.txt", FileMode.Open, FileAccess.Read);
-                   reader = new StreamReader(stream);
-                 
+                   // stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
+                    // stream = new FileStream("Problem.txt", FileMode.Open, FileAccess.Read);
+                    //reader = new StreamReader(stream);
+                    //return null;
+
                 }
             }
             catch (System.Exception)

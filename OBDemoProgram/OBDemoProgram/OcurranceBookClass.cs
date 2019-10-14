@@ -91,13 +91,14 @@ namespace OBDemoProgram
 
         public string GetNewReturnOBNumber()
         {
-            if (obList == null)
+            try
             {
-                return "1";
+                return (int.Parse(obList[obList.Count - 1].Rob) + 1).ToString();
             }
-            else
+            catch (Exception)
             {
-                return (int.Parse(obList[obList.Count - 1].Rob)+1).ToString();
+
+                return "1";
             }
         }
 

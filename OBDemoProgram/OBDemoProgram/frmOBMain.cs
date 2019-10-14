@@ -30,9 +30,34 @@ namespace OBDemoProgram
             txtTime.Text = DateTime.Now.ToString("h:mm:ss tt");
         }
 
+        public string converDate(string dateGiven)
+        {
+            string[] newDate = dateGiven.Split(' ');
+            switch (newDate[2])
+            {
+                case "October": {
+                        newDate[2] = "10";
+                    } break;
+                default:
+                    break;
+            }
+
+            return newDate[1] + "-" + newDate[2] + "-" + newDate[3];
+        }
+
         private void btnLogEntry_Click(object sender, EventArgs e)
         {
+            string rOBNum = lblReturnOBnumber.Text;
+            string oBNum = txtOBNumber.Text;
+            string shift = cmbShift.SelectedText;
+            //string siteCallSign = ((SiteClass)cmbSite.SelectedItem).Callsighn;
+            //string officer = ((OfficerClass)cmbOfficer.SelectedItem).PSiRA;
+            string thedate = converDate(dtmDate.Text);
+            string occurence = cmbOccurence.SelectedText;
+            string notes = txtOccurenceNote.Text;
 
+
+            
         }
 
         
