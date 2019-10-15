@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OBDemoProgram
 {
@@ -69,7 +70,12 @@ namespace OBDemoProgram
         }
         public override string ToString()
         {
-            return string.Format(pSiRA+": "+name+" "+surname );
+            return GetTypeToString();
+        }
+
+        public string GetTypeToString()
+        {
+           return string.Format(pSiRA + ": " + name + " " + surname);
         }
         #endregion
 

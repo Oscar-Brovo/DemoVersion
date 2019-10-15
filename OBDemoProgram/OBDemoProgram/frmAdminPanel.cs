@@ -214,6 +214,7 @@ namespace OBDemoProgram
 
         public void ReloadSiteList()
         {
+            //siteClass.ToStringIdentifier = "Defualt";
             lstSitesList.DataSource = null;
             List<SiteClass> thelist = new List<SiteClass>();
             foreach (SiteClass item in siteClass.GetSiteData())

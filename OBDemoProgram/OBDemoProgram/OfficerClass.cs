@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OBDemoProgram
 {
@@ -44,7 +45,20 @@ namespace OBDemoProgram
         #region Overrides
         public override string ToString()
         {
-            return string.Format(pSiRA + ": " + name + " " + surname);
+            return GetTypeToString();
+        }
+        public string GetTypeToString()
+        {
+            if (Form.ActiveForm.Name == "frmAdminPanel")
+            {
+                return string.Format(pSiRA + ": " + name + " " + surname);
+            }
+            if (Form.ActiveForm.Name == "frmOBMain")
+            {
+                return string.Format(name +" "+surname);
+            }
+            return string.Format(name + " " + surname);
+            // return string.Format(pSiRA + ": " + name + " " + surname);
         }
         #endregion
 

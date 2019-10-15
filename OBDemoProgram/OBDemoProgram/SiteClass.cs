@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OBDemoProgram
 {
-   public class SiteClass
+   public class SiteClass 
     {
         private string callsighn;
         private string siteName;
@@ -31,13 +32,28 @@ namespace OBDemoProgram
         public string CleintContactNr { get => cleintContactNr; set => cleintContactNr = value; }
         public string Active { get => active; set => active = value; }
 
+        
         public override string ToString()
         {
-            return string.Format(callsighn + ": " + siteName);
+            return GetTypeToString();
+        }
+        
+        public string GetTypeToString()
+        {
+            if( == "Defualt")
+            {
+                return string.Format(callsighn + ": " + siteName);
+            }
+            if(Form.ActiveForm.Name == "frmOBMain")
+            {
+                return siteName;
+            }
+
+            return siteName;
         }
 
         #region Methods
-        
+
         public List<SiteClass> GetSiteData()
         {
             siteList = new List<SiteClass>();

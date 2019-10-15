@@ -15,6 +15,7 @@ namespace OBDemoProgram
         public frmMenu menu;
         public PersonClass personClassAdminForm;
         public OcurranceBookClass OBEntry;
+        public string toStringDisplay = "OBMain";
 
         public frmOBMain()
         {
@@ -25,11 +26,13 @@ namespace OBDemoProgram
         {
             OBEntry = new OcurranceBookClass();
             SiteClass site = new SiteClass();
+            OfficerClass officer = new OfficerClass();
             OBEntry.PopulateOBList();
             lblReturnOBnumber.Text = OBEntry.GetNewReturnOBNumber();
 
             txtTime.Text = DateTime.Now.ToString("h:mm:ss tt");
             cmbSite.DataSource = site.GetSiteData();
+            cmbOfficer.DataSource = officer.GetOfficerData();
 
         }
 
@@ -53,8 +56,8 @@ namespace OBDemoProgram
             string rOBNum = lblReturnOBnumber.Text;
             string oBNum = txtOBNumber.Text;
             string shift = cmbShift.SelectedText;
-            //string siteCallSign = ((SiteClass)cmbSite.SelectedItem).Callsighn;
-            //string officer = ((OfficerClass)cmbOfficer.SelectedItem).PSiRA;
+            string siteCallSign = ((SiteClass)cmbSite.SelectedItem).Callsighn;
+            string officer = ((OfficerClass)cmbOfficer.SelectedItem).PSiRA;
             string thedate = converDate(dtmDate.Text);
             string occurence = cmbOccurence.SelectedText;
             string notes = txtOccurenceNote.Text;
@@ -63,6 +66,10 @@ namespace OBDemoProgram
             
         }
 
-        
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
+        }
     }
 }
