@@ -22,7 +22,7 @@ namespace OBDemoProgram
         public frmAdminPanel()
         {
             InitializeComponent();
-           // officerClass.PopulatingList();
+            //officerClass.PopulatingList();
         }
 
         public bool testField(string field, int testType = 2) // testType 1 = numbers ,  2 = text type
@@ -76,6 +76,7 @@ namespace OBDemoProgram
         #region Officers
         public void ReloadOfficerList()
         {
+            ConstantClass.ToStringType = "AdminList";
             lstOfficers.DataSource = null;
             List<OfficerClass> thelist = new List<OfficerClass>();
             foreach (OfficerClass item in officerClass.GetOfficerData())
@@ -214,7 +215,7 @@ namespace OBDemoProgram
 
         public void ReloadSiteList()
         {
-            //siteClass.ToStringIdentifier = "Defualt";
+            ConstantClass.ToStringType = "AdminList";
             lstSitesList.DataSource = null;
             List<SiteClass> thelist = new List<SiteClass>();
             foreach (SiteClass item in siteClass.GetSiteData())
@@ -350,6 +351,7 @@ namespace OBDemoProgram
 
         public void ReloadPersonList()
         {
+            ConstantClass.ToStringType = "AdminList";
             lstPerson.DataSource = null;
             List<PersonClass> thelist = new List<PersonClass>();
             foreach (PersonClass item in personClass.GetPersonData())

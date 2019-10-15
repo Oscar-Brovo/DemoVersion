@@ -15,9 +15,43 @@ namespace OBDemoProgram
         public frmMenu menu;
         public PersonClass personClassAdminForm;
 
+        private frmOBMain obmain = new frmOBMain();
+
         public frmOBList()
         {
             InitializeComponent();
+        }
+
+        private void frmOBList_Load(object sender, EventArgs e)
+        {
+            OcurranceBookClass obclass = new OcurranceBookClass();
+            obclass.PopulateOBList();
+            lstOBList.DataSource = null;
+            lstOBList.DataSource = obclass.obList;
+        }
+
+        private void btnViewEntry_Click(object sender, EventArgs e)
+        {
+            
+            obmain.obList = (frmOBList)Form.ActiveForm;
+            if (lstOBList.SelectedIndex != -1)
+            {
+                obmain.OBEntry = (OcurranceBookClass)lstOBList.SelectedItem;
+            }
+            else
+            {
+                MessageBox.Show("Please select a entry");
+            }
+            obmain.personClassAdminForm = personClassAdminForm;
+            obmain.Show();
+            obmain.PopulateUpdateData();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Close();
         }
     }
 }

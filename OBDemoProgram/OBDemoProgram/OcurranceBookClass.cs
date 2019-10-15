@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OBDemoProgram
 {
@@ -10,21 +11,21 @@ namespace OBDemoProgram
     {
         #region Values
         private string robDate; //Primary key.
-        private string rob;
+        private int rob;
         private int ob;
-        private int shifts;
+        private string shifts;
         private string site;
         private string occurence;
         private string notes; 
-        private string  officer;
+        private int  officer;
         private string dateAndTime;
 
-        private List<OcurranceBookClass> obList = new List<OcurranceBookClass>();
+        public List<OcurranceBookClass> obList = new List<OcurranceBookClass>();
         #endregion
 
         #region Constructors 
         public OcurranceBookClass() { }
-        public OcurranceBookClass(string robDate, string rob, int ob, int shifts, string site, string occurence, string notes, string officer, string dateAndTime)
+        public OcurranceBookClass(string robDate, int rob, int ob, string shifts, string site, string occurence, string notes, int officer, string dateAndTime)
         {
             this.RobDate = robDate;
             this.Rob = rob;
@@ -41,13 +42,13 @@ namespace OBDemoProgram
         
         #region Properties
         public string RobDate { get => robDate; set => robDate = value; }
-        public string Rob { get => rob; set => rob = value; }
+        public int Rob { get => rob; set => rob = value; }
         public int Ob { get => ob; set => ob = value; }
-        public int Shifts { get => shifts; set => shifts = value; }
+        public string Shifts { get => shifts; set => shifts = value; }
         public string Site { get => site; set => site = value; }
         public string Occurence { get => occurence; set => occurence = value; }
         public string Notes { get => notes; set => notes = value; }
-        public string Officer { get => officer; set => officer = value; }
+        public int Officer { get => officer; set => officer = value; }
         public string DateAndTime { get => dateAndTime; set => dateAndTime = value; }
         #endregion
 
@@ -63,7 +64,7 @@ namespace OBDemoProgram
         }
         public override string ToString()
         {
-            return base.ToString();
+            return string.Format(rob + "  - " + dateAndTime.Split('#')[0] + " " + dateAndTime.Split('#')[1] + " : " + occurence);
         }
         #endregion
 
@@ -81,8 +82,8 @@ namespace OBDemoProgram
                     if (data != "")
                     {
                         string[] line = data.Split(',');
-                        obList.Add(new OcurranceBookClass(line[0], line[1], int.Parse(line[2]), int.Parse(line[3]), line[4], line[5], line[6], line[7], line[8]));
-                        
+                        obList.Add(new OcurranceBookClass(line[0], int.Parse(line[1]), int.Parse(line[2]), line[3], line[4], line[5], line[6], int.Parse(line[7]), line[8]));
+                        // robdate , rob , ob , shift , site , occurence , notes , officer , date time
                     }
                 }
             }
@@ -93,7 +94,7 @@ namespace OBDemoProgram
         {
             try
             {
-                return (int.Parse(obList[obList.Count - 1].Rob) + 1).ToString();
+                return (obList[obList.Count - 1].Rob + 1).ToString();
             }
             catch (Exception)
             {
@@ -119,6 +120,22 @@ namespace OBDemoProgram
             return false;
         }
 
+        public bool RecordEntry()
+        {
+            FileHandler fh = new FileHandler("OBList.csv");
+            List<string> theList = new List<string>();
+            theList.Add(ObjectToString());
+            if (fh.WriteDataToTXT(theList))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public string ObjectToString()
+        {
+            return robDate + "," + rob + "," + ob + "," + shifts + "," + site + "," + occurence + "," + notes.Replace(',', '@').Replace(Environment.NewLine, "&") + "," + officer + "," + dateAndTime;
+        }
         #endregion
     }
 }

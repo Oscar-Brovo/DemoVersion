@@ -9,8 +9,9 @@ namespace OBDemoProgram
 
     class ConstantClass
     {
+        public static string ToStringType = "";
 
-        public string toStringConst = "Defualt";
+        public static int Programflow = 0;
 
     }
 }

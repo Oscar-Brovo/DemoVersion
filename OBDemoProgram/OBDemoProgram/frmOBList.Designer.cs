@@ -53,6 +53,7 @@
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnViewEntry
             // 
@@ -62,6 +63,7 @@
             this.btnViewEntry.TabIndex = 2;
             this.btnViewEntry.Text = "View Entry";
             this.btnViewEntry.UseVisualStyleBackColor = true;
+            this.btnViewEntry.Click += new System.EventHandler(this.btnViewEntry_Click);
             // 
             // cmbFilterBox
             // 
@@ -90,7 +92,7 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Occurrence Book Refference List";
             // 
-            // Form1
+            // frmOBList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,8 +103,9 @@
             this.Controls.Add(this.btnViewEntry);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lstOBList);
-            this.Name = "Form1";
+            this.Name = "frmOBList";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmOBList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

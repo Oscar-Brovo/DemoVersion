@@ -15,8 +15,10 @@ namespace OBDemoProgram
             this.filePath = filePathParam;
         }
 
-        public void WriteDataToTXT(List<string> dataToWrite)
+        public bool WriteDataToTXT(List<string> dataToWrite)
         {
+
+            bool flag = true;
 
             try
             {
@@ -42,19 +44,20 @@ namespace OBDemoProgram
             catch (System.Exception)
             {
 
-                throw;
+                flag = false;
             }
             finally
             {
                 writer.Close();
                 stream.Close();
             }
+            return flag;
 
         }
 
-        public void RewriteDataToTXT(List<string> dataToWrite)
+        public bool RewriteDataToTXT(List<string> dataToWrite)
         {
-
+            bool flag = true;
             try
             {
                
@@ -74,7 +77,7 @@ namespace OBDemoProgram
             catch (System.Exception)
             {
 
-                throw;
+                flag =  false;
             }
             finally
             {
@@ -82,7 +85,7 @@ namespace OBDemoProgram
                 stream.Close();
             }
 
-
+            return flag;
 
 
 
@@ -107,9 +110,9 @@ namespace OBDemoProgram
                 }
                 else
                 {
-                   // stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
+                    stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
                     // stream = new FileStream("Problem.txt", FileMode.Open, FileAccess.Read);
-                    //reader = new StreamReader(stream);
+                    reader = new StreamReader(stream);
                     //return null;
 
                 }

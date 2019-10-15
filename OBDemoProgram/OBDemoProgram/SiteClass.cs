@@ -40,16 +40,16 @@ namespace OBDemoProgram
         
         public string GetTypeToString()
         {
-            if( == "Defualt")
+            if(ConstantClass.ToStringType == "AdminList")
             {
                 return string.Format(callsighn + ": " + siteName);
             }
-            if(Form.ActiveForm.Name == "frmOBMain")
+            if(ConstantClass.ToStringType == "OBCombo")
             {
                 return siteName;
             }
 
-            return siteName;
+            return "Error";
         }
 
         #region Methods

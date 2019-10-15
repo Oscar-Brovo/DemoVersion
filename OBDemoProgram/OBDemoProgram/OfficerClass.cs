@@ -49,16 +49,15 @@ namespace OBDemoProgram
         }
         public string GetTypeToString()
         {
-            if (Form.ActiveForm.Name == "frmAdminPanel")
+            if (ConstantClass.ToStringType == "AdminList")
             {
                 return string.Format(pSiRA + ": " + name + " " + surname);
             }
-            if (Form.ActiveForm.Name == "frmOBMain")
+            if (ConstantClass.ToStringType == "OBCombo")
             {
                 return string.Format(name +" "+surname);
             }
             return string.Format(name + " " + surname);
-            // return string.Format(pSiRA + ": " + name + " " + surname);
         }
         #endregion
 

@@ -38,17 +38,17 @@
             this.cmbShift = new System.Windows.Forms.ComboBox();
             this.lblShift = new System.Windows.Forms.Label();
             this.txtTime = new System.Windows.Forms.TextBox();
-            this.dtmDate = new System.Windows.Forms.DateTimePicker();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.txtOBNumber = new System.Windows.Forms.TextBox();
             this.lblOB = new System.Windows.Forms.Label();
             this.lblReturnOBnumber = new System.Windows.Forms.Label();
-            this.txtReturnOB = new System.Windows.Forms.Label();
+            this.justalabel = new System.Windows.Forms.Label();
             this.lbloccurencepage = new System.Windows.Forms.Label();
             this.btnLogEntry = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtOccurenceNote
@@ -75,9 +75,8 @@
             this.cmbOccurence.Location = new System.Drawing.Point(124, 180);
             this.cmbOccurence.Margin = new System.Windows.Forms.Padding(4);
             this.cmbOccurence.Name = "cmbOccurence";
-            this.cmbOccurence.Size = new System.Drawing.Size(267, 24);
+            this.cmbOccurence.Size = new System.Drawing.Size(349, 24);
             this.cmbOccurence.TabIndex = 34;
-            this.cmbOccurence.Text = "-";
             // 
             // lblOccurence
             // 
@@ -147,7 +146,7 @@
             this.cmbSite.Location = new System.Drawing.Point(292, 133);
             this.cmbSite.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSite.Name = "cmbSite";
-            this.cmbSite.Size = new System.Drawing.Size(97, 24);
+            this.cmbSite.Size = new System.Drawing.Size(181, 24);
             this.cmbSite.TabIndex = 30;
             this.cmbSite.Text = "-";
             // 
@@ -168,12 +167,11 @@
             this.cmbShift.Items.AddRange(new object[] {
             "DAYSHIFT",
             "NIGHTSHIFT"});
-            this.cmbShift.Location = new System.Drawing.Point(120, 133);
+            this.cmbShift.Location = new System.Drawing.Point(124, 133);
             this.cmbShift.Margin = new System.Windows.Forms.Padding(4);
             this.cmbShift.Name = "cmbShift";
-            this.cmbShift.Size = new System.Drawing.Size(84, 24);
+            this.cmbShift.Size = new System.Drawing.Size(114, 24);
             this.cmbShift.TabIndex = 28;
-            this.cmbShift.Text = "-";
             // 
             // lblShift
             // 
@@ -195,14 +193,6 @@
             this.txtTime.Size = new System.Drawing.Size(132, 22);
             this.txtTime.TabIndex = 26;
             this.txtTime.Text = "-";
-            // 
-            // dtmDate
-            // 
-            this.dtmDate.Location = new System.Drawing.Point(788, 59);
-            this.dtmDate.Margin = new System.Windows.Forms.Padding(4);
-            this.dtmDate.Name = "dtmDate";
-            this.dtmDate.Size = new System.Drawing.Size(265, 22);
-            this.dtmDate.TabIndex = 25;
             // 
             // lblDateTime
             // 
@@ -246,24 +236,24 @@
             this.lblReturnOBnumber.TabIndex = 21;
             this.lblReturnOBnumber.Text = "Number";
             // 
-            // txtReturnOB
+            // justalabel
             // 
-            this.txtReturnOB.AutoSize = true;
-            this.txtReturnOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReturnOB.Location = new System.Drawing.Point(22, 61);
-            this.txtReturnOB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtReturnOB.Name = "txtReturnOB";
-            this.txtReturnOB.Size = new System.Drawing.Size(85, 24);
-            this.txtReturnOB.TabIndex = 20;
-            this.txtReturnOB.Text = "Return OB";
-            this.txtReturnOB.UseCompatibleTextRendering = true;
-            this.txtReturnOB.UseMnemonic = false;
+            this.justalabel.AutoSize = true;
+            this.justalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.justalabel.Location = new System.Drawing.Point(22, 61);
+            this.justalabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.justalabel.Name = "justalabel";
+            this.justalabel.Size = new System.Drawing.Size(85, 24);
+            this.justalabel.TabIndex = 20;
+            this.justalabel.Text = "Return OB";
+            this.justalabel.UseCompatibleTextRendering = true;
+            this.justalabel.UseMnemonic = false;
             // 
             // lbloccurencepage
             // 
             this.lbloccurencepage.AutoSize = true;
             this.lbloccurencepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbloccurencepage.Location = new System.Drawing.Point(384, 17);
+            this.lbloccurencepage.Location = new System.Drawing.Point(360, 9);
             this.lbloccurencepage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbloccurencepage.Name = "lbloccurencepage";
             this.lbloccurencepage.Size = new System.Drawing.Size(360, 39);
@@ -310,11 +300,20 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Occurrence\r\n    Notes";
             // 
+            // txtDate
+            // 
+            this.txtDate.Enabled = false;
+            this.txtDate.Location = new System.Drawing.Point(788, 63);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(132, 22);
+            this.txtDate.TabIndex = 40;
+            // 
             // frmOBMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 497);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
@@ -329,12 +328,11 @@
             this.Controls.Add(this.cmbShift);
             this.Controls.Add(this.lblShift);
             this.Controls.Add(this.txtTime);
-            this.Controls.Add(this.dtmDate);
             this.Controls.Add(this.lblDateTime);
             this.Controls.Add(this.txtOBNumber);
             this.Controls.Add(this.lblOB);
             this.Controls.Add(this.lblReturnOBnumber);
-            this.Controls.Add(this.txtReturnOB);
+            this.Controls.Add(this.justalabel);
             this.Controls.Add(this.lbloccurencepage);
             this.Name = "frmOBMain";
             this.Text = "frmOBMain";
@@ -355,16 +353,16 @@
         private System.Windows.Forms.ComboBox cmbShift;
         private System.Windows.Forms.Label lblShift;
         private System.Windows.Forms.TextBox txtTime;
-        private System.Windows.Forms.DateTimePicker dtmDate;
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.TextBox txtOBNumber;
         private System.Windows.Forms.Label lblOB;
         private System.Windows.Forms.Label lblReturnOBnumber;
-        private System.Windows.Forms.Label txtReturnOB;
+        private System.Windows.Forms.Label justalabel;
         private System.Windows.Forms.Label lbloccurencepage;
         private System.Windows.Forms.Button btnLogEntry;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDate;
     }
 }

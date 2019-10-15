@@ -56,7 +56,9 @@ namespace OBDemoProgram
 
         private void btnNewOB_Click(object sender, EventArgs e)
         {
+            ConstantClass.Programflow = 1;
             frmOBMain frmOB = new frmOBMain();
+            frmOB.personClassAdminForm = personClassMenu;
             frmOB.menu = (frmMenu)Form.ActiveForm;
             frmOB.Show();
             this.Hide();
@@ -74,7 +76,12 @@ namespace OBDemoProgram
 
         private void btnOBList_Click(object sender, EventArgs e)
         {
-
+            ConstantClass.Programflow = 2;
+            frmOBList frmOBLst = new frmOBList();
+            frmOBLst.personClassAdminForm = personClassMenu;
+            frmOBLst.menu = (frmMenu)Form.ActiveForm;
+            frmOBLst.Show();
+            this.Hide();
         }
     }
 }
