@@ -120,17 +120,42 @@ namespace OBDemoProgram
             return false;
         }
 
-        public bool RecordEntry()
+        public bool RecordEntry(string InsertOrUpdate)
         {
             FileHandler fh = new FileHandler("OBList.csv");
             List<string> theList = new List<string>();
-            theList.Add(ObjectToString());
-            if (fh.WriteDataToTXT(theList))
+
+            if(InsertOrUpdate == "updated")
             {
-                return true;
+                PopulateOBList();
+                for (int i = 0; i < obList.Count; i++)
+                {
+                    if (robDate==obList[i].RobDate)
+                    {
+                        obList[i].Ob = ob;
+                        obList[i].Shifts = shifts;
+                        obList[i].Site = site;
+                        obList[i].Officer = officer;
+                        obList[i].Occurence = occurence;
+                        obList[i].Notes = notes;
+                    }
+                    theList.Add(obList[i].ObjectToString());
+                }
+                if (fh.RewriteDataToTXT(theList)) return true;
             }
+            if(InsertOrUpdate == "added")
+            {
+                theList.Add(ObjectToString());
+                if (fh.WriteDataToTXT(theList))
+                {
+                    return true;
+                }
+            }
+            
             return false;
         }
+
+       
 
         public string ObjectToString()
         {

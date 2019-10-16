@@ -72,6 +72,7 @@
             this.cmbFilterBox.Name = "cmbFilterBox";
             this.cmbFilterBox.Size = new System.Drawing.Size(121, 24);
             this.cmbFilterBox.TabIndex = 3;
+            this.cmbFilterBox.Visible = false;
             // 
             // label1
             // 
@@ -81,6 +82,7 @@
             this.label1.Size = new System.Drawing.Size(59, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Filter By";
+            this.label1.Visible = false;
             // 
             // label2
             // 

@@ -43,8 +43,8 @@ namespace OBDemoProgram
             cmbOfficer.DataSource = officer.GetOfficerData();
             txtTime.Text = DateTime.Now.ToString("HH:mm:ss");
             txtDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtOBNumber.Text = personClassAdminForm.PSiRA;
 
-            txtOBNumber.Text = "";
             txtOccurenceNote.Text = "";
             cmbOccurence.SelectedIndex = -1;
             cmbOfficer.SelectedIndex = -1;
@@ -57,6 +57,8 @@ namespace OBDemoProgram
             cmbOfficer.Enabled = true;
             cmbShift.Enabled = true;
             cmbSite.Enabled = true;
+
+            btnLogEntry.Text = "Log Occurrence";
         }
 
         public void ClearOBForm()
@@ -109,7 +111,7 @@ namespace OBDemoProgram
         private void btnLogEntry_Click(object sender, EventArgs e)
         {
             string AddorUpdate = "";
-            if (btnLogEntry.Text == "")
+            if (btnLogEntry.Text == "Log Occurrence")
             {
                 AddorUpdate = "added";
             }
@@ -147,7 +149,7 @@ namespace OBDemoProgram
                 if (TestForIntAndCmb(rOBNum) && TestForIntAndCmb(oBNum) && TestForString(notes) && flag)
                 {
                     OBEntry = new OcurranceBookClass((rOBNum + "#" + theDate), int.Parse(rOBNum), int.Parse(oBNum), shift, siteCallSign, occurence, notes, int.Parse(officer), theDate + "#" + theTime);
-                    if (OBEntry.RecordEntry())
+                    if (OBEntry.RecordEntry(AddorUpdate))
                     {
                         MessageBox.Show("Record has been "+AddorUpdate);
                         ClearOBForm();
@@ -217,12 +219,26 @@ namespace OBDemoProgram
             }
             cmbSite.SelectedIndex = finalIndex;
             txtOccurenceNote.Text = OBEntry.Notes.Replace("&", Environment.NewLine).Replace("@", ",");
+
+            btnLogEntry.Text = "Update Occurrence";
+
+            if (personClassAdminForm.Rank != 2)
+            {
+                btnLogEntry.Enabled = false;
+                txtOBNumber.Enabled = false;
+                txtOccurenceNote.Enabled = false;
+                cmbShift.Enabled = false;
+                cmbSite.Enabled = false;
+                cmbOfficer.Enabled = false;
+                cmbOccurence.Enabled = false;
+            }
         }
 
+        
        
     }
 }
 
 
-// Add update 
+
 // check on why active form is null on obList
