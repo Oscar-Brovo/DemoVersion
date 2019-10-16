@@ -19,6 +19,8 @@ namespace OBDemoProgram
         public PersonClass personClass = new PersonClass();
         public frmMenu menu;
 
+        
+
         public frmAdminPanel()
         {
             InitializeComponent();
@@ -40,6 +42,7 @@ namespace OBDemoProgram
                             catch (Exception)
                             {
                                 MessageBox.Show("The PSiRA field should only contain numbers");
+                                return false;
                             }
                         }
                         else

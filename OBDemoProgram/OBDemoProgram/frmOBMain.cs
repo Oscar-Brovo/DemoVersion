@@ -19,6 +19,9 @@ namespace OBDemoProgram
         public OcurranceBookClass OBEntry = new OcurranceBookClass();
         public string toStringDisplay = "OBMain";
 
+        public List<SiteClass> siteCmbList = new List<SiteClass>();
+        public List<OfficerClass> officerCmbList = new List<OfficerClass>();
+
         public frmOBMain()
         {
             InitializeComponent();
@@ -31,7 +34,6 @@ namespace OBDemoProgram
 
         public void ReloadOBForm()
         {
-           // OBEntry = new OcurranceBookClass();
             SiteClass site = new SiteClass();
             OfficerClass officer = new OfficerClass();
             ConstantClass.ToStringType = "OBCombo";
