@@ -15,7 +15,8 @@ namespace OBDemoProgram
         public frmMenu menu;
         public PersonClass personClassAdminForm;
 
-        private frmOBMain obmain = new frmOBMain();
+        private frmOBMain obmain;
+
 
         public frmOBList()
         {
@@ -32,8 +33,9 @@ namespace OBDemoProgram
 
         private void btnViewEntry_Click(object sender, EventArgs e)
         {
-            
-            obmain.obList = (frmOBList)Form.ActiveForm;
+           obmain = new frmOBMain();
+
+             obmain.obList = (frmOBList)Form.ActiveForm;
             if (lstOBList.SelectedIndex != -1)
             {
                 obmain.OBEntry = (OcurranceBookClass)lstOBList.SelectedItem;
@@ -42,6 +44,7 @@ namespace OBDemoProgram
             {
                 MessageBox.Show("Please select a entry");
             }
+            ConstantClass.Programflow = 2;
             obmain.personClassAdminForm = personClassAdminForm;
             obmain.Show();
             obmain.PopulateUpdateData();

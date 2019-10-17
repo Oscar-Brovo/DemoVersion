@@ -219,6 +219,7 @@ namespace OBDemoProgram
                 }
                 index++;
             }
+
             cmbSite.SelectedIndex = finalIndex;
             txtOccurenceNote.Text = OBEntry.Notes.Replace("&", Environment.NewLine).Replace("@", ",");
 
