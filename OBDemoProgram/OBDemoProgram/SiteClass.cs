@@ -13,16 +13,24 @@ namespace OBDemoProgram
         private string siteName;
         private string clientName;
         private string cleintContactNr;
+        private string emt;
+        private string fire;
+        private string armed;
+        private string saps;
         private string active;
 
         private List<SiteClass> siteList;
         public SiteClass() { }
-        public SiteClass(string callsighn, string siteName, string clientName, string cleintContactNr, string active)
+        public SiteClass(string callsighn, string siteName, string clientName, string cleintContactNr, string emt, string fire, string armed, string saps, string active)
         {
             this.Callsighn = callsighn;
             this.SiteName = siteName;
             this.ClientName = clientName;
             this.CleintContactNr = cleintContactNr;
+            this.Emt = emt;
+            this.Fire = fire;
+            this.Armed = armed;
+            this.Saps = saps;
             this.Active = active;
         }
 
@@ -30,6 +38,10 @@ namespace OBDemoProgram
         public string SiteName { get => siteName; set => siteName = value; }
         public string ClientName { get => clientName; set => clientName = value; }
         public string CleintContactNr { get => cleintContactNr; set => cleintContactNr = value; }
+        public string Emt { get => emt; set => emt = value; }
+        public string Fire { get => fire; set => fire =  value; }
+        public string Armed { get => armed; set => armed = value; }
+        public string Saps { get => saps; set => saps = value; }
         public string Active { get => active; set => active = value; }
 
         
@@ -42,7 +54,7 @@ namespace OBDemoProgram
         {
             if(ConstantClass.ToStringType == "AdminList")
             {
-                return string.Format(callsighn + ": " + siteName);
+                return string.Format(callsighn + ":" + siteName);
             }
             if(ConstantClass.ToStringType == "OBCombo")
             {
@@ -64,7 +76,7 @@ namespace OBDemoProgram
                 if (data != "")
                 {
                     string[] line = data.Split(',');
-                    siteList.Add(new SiteClass(line[0], line[1], line[2], line[3], line[4]));
+                    siteList.Add(new SiteClass(line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8]));
                    
                 }
             }
@@ -99,12 +111,16 @@ namespace OBDemoProgram
                         siteList[i].SiteName = siteName;
                         siteList[i].ClientName = clientName;
                         siteList[i].CleintContactNr = cleintContactNr;
+                        siteList[i].Emt = emt;
+                        siteList[i].Fire = fire;
+                        siteList[i].Armed = armed;
+                        siteList[i].Saps = saps;
                         siteList[i].active = "true";
                         addSite = true;
                         List<string> theList = new List<string>();
                         foreach (SiteClass item in siteList)
                         {
-                            theList.Add(item.Callsighn + "," + item.SiteName + "," + item.ClientName + "," + item.CleintContactNr + "," + item.active);
+                            theList.Add(item.Callsighn + "," + item.SiteName + "," + item.ClientName + "," + item.CleintContactNr + "," + item.Emt + "," + item.Fire + "," + item.Armed + "," + item.Saps + "," + item.active);
                         }
 
                         fh.RewriteDataToTXT(theList);
@@ -113,7 +129,7 @@ namespace OBDemoProgram
                 }
                 if (!addSite)
                 {
-                    List<string> thelist = new List<string>() { callsighn + "," + siteName + "," + clientName + "," + cleintContactNr + "," + "true" };
+                    List<string> thelist = new List<string>() { callsighn + "," + siteName + "," + clientName + "," + cleintContactNr + "," + emt + "," + fire + "," + fire + "," + saps + "," + "true" };
                     fh.WriteDataToTXT(thelist);
                 }
 
@@ -138,6 +154,10 @@ namespace OBDemoProgram
                         siteList[i].SiteName = siteName;
                         siteList[i].ClientName = clientName;
                         siteList[i].CleintContactNr = cleintContactNr;
+                        siteList[i].Emt = emt;
+                        siteList[i].Fire = fire;
+                        siteList[i].Armed = armed;
+                        siteList[i].Saps = saps;
                         siteList[i].active = "true";
                         break;
                     }
@@ -146,7 +166,7 @@ namespace OBDemoProgram
                 List<string> theList = new List<string>();
                 foreach (SiteClass item in siteList)
                 {
-                    theList.Add(item.Callsighn + "," + item.SiteName + "," + item.ClientName + "," + item.CleintContactNr + "," + item.active);
+                    theList.Add(item.Callsighn + "," + item.SiteName + "," + item.ClientName + "," + item.CleintContactNr + "," + item.Emt + "," + item.fire + "," + item.Armed + "," + item.Saps + "," + item.active);
                 }
 
                 fh.RewriteDataToTXT(theList);
@@ -177,7 +197,7 @@ namespace OBDemoProgram
                 List<string> theList = new List<string>();
                 foreach (SiteClass item in siteList)
                 {
-                    theList.Add(item.Callsighn + "," + item.SiteName + "," + item.ClientName + "," + item.CleintContactNr + "," + item.active);
+                    theList.Add(item.Callsighn + "," + item.SiteName + "," + item.ClientName + "," + item.CleintContactNr + "," + item.Emt + "," + item.fire + "," + item.Armed + "," + item.Saps + "," + item.active);
                 }
 
                 fh.RewriteDataToTXT(theList);
@@ -190,6 +210,6 @@ namespace OBDemoProgram
 
             return true;
         }
-        #endregion
+        #endregion 
     }
 }

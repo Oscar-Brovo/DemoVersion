@@ -12,3 +12,16 @@ E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug
 E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmOBList.resources
 E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmMenu.resources
 E:\GitHub Projects\CarbonBlack\DemoVersion\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmOBMain.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.csprojAssemblyReference.cache
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmAdminPanel.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmOBList.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmLogin.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmMenu.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.frmOBMain.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.Properties.Resources.resources
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.csproj.GenerateResource.cache
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.exe
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\obj\Debug\OBDemoProgram.pdb
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\bin\Debug\OBDemoProgram.exe.config
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\bin\Debug\OBDemoProgram.exe
+C:\Users\Apprentice\Desktop\DemoVersion-master\OBDemoProgram\OBDemoProgram\bin\Debug\OBDemoProgram.pdb

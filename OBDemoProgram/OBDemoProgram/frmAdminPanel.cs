@@ -238,6 +238,10 @@ namespace OBDemoProgram
             txtSiteName.Text = "";
             txtSiteClientName.Text = "";
             txtSiteContactNumber.Text = "";
+            txtEmt.Text = "";
+            txtFire.Text = "";
+            txtArmed.Text = "";
+            txtSaps.Text = "";
             lstSitesList.SelectedIndex = -1;
             btnSiteLog.Text = "Add New Site";
         }
@@ -257,6 +261,10 @@ namespace OBDemoProgram
                 siteClass.Callsighn = txtSiteCallSign.Text;
                 siteClass.SiteName = txtSiteName.Text;
                 siteClass.ClientName = txtSiteClientName.Text;
+                siteClass.Emt = txtEmt.Text;
+                siteClass.Fire = txtFire.Text;
+                siteClass.Armed = txtArmed.Text;
+                siteClass.Saps = txtSaps.Text;
                 siteClass.CleintContactNr = txtSiteContactNumber.Text;
                 if (btnSiteLog.Text == "Add New Site")
                 {
@@ -316,6 +324,10 @@ namespace OBDemoProgram
                 txtSiteName.Text = site.SiteName;
                 txtSiteClientName.Text = site.ClientName;
                 txtSiteContactNumber.Text = site.CleintContactNr;
+                txtEmt.Text = site.Emt;
+                txtFire.Text = site.Fire;
+                txtArmed.Text = site.Armed;
+                txtSaps.Text = site.Saps;
                 btnSiteLog.Text = "Update Site";
             }
         }
@@ -515,8 +527,9 @@ namespace OBDemoProgram
             this.Close();
         }
 
+
         #endregion
 
-
+        
     }
 }
