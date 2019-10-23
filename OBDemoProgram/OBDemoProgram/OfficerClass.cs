@@ -14,6 +14,7 @@ namespace OBDemoProgram
         private string name;
         private string surname;
         private string contactNumber;
+        private string site;
         private string active;
 
 
@@ -22,12 +23,13 @@ namespace OBDemoProgram
 
         #region Constructors
         public OfficerClass() { }
-        public OfficerClass(string pSiRA, string name, string surname, string contactNumber, string active)
+        public OfficerClass(string pSiRA, string name, string surname, string contactNumber, string site, string active)
         {
             this.PSiRA = pSiRA;
             this.Name = name;
             this.Surname = surname;
             this.ContactNumber = contactNumber;
+            this.Site = site;
             this.Active = active;
 
         }
@@ -39,6 +41,7 @@ namespace OBDemoProgram
         public string Name { get => name; set => name = value; }
         public string Surname { get => surname; set => surname = value; }
         public string ContactNumber { get => contactNumber; set => contactNumber = value; }
+        public string Site { get => site; set => site = value; }
         public string Active { get => active; set => active = value; }
         #endregion
 
@@ -74,7 +77,7 @@ namespace OBDemoProgram
                 if (data != "")
                 {
                     string[] line = data.Split(',');
-                    officerList.Add(new OfficerClass(line[0], line[1], line[2], line[3], line[4]));
+                    officerList.Add(new OfficerClass(line[0], line[1], line[2], line[3], line[4], line[5]));
                     // pSiRA , Name , Surename, contactNumber, active
                 }
             }
@@ -109,12 +112,13 @@ namespace OBDemoProgram
                         officerList[i].Name = name;
                         officerList[i].Surname = surname;
                         officerList[i].contactNumber = contactNumber;
+                        officerList[i].Site = site;
                         officerList[i].active = "true";
                         addUser = true;
                         List<string> theList = new List<string>();
                         foreach (OfficerClass item in officerList)
                         {
-                            theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.ContactNumber + "," + item.active);
+                            theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.ContactNumber + "," + item.site + "," + item.active);
                         }
 
                         fh.RewriteDataToTXT(theList);
@@ -123,7 +127,7 @@ namespace OBDemoProgram
                 }
                 if (!addUser)
                 {
-                    List<string> thelist = new List<string>() { pSiRA + "," + name + "," + surname + "," + contactNumber + "," + "true" };
+                    List<string> thelist = new List<string>() { pSiRA + "," + name + "," + surname + "," + contactNumber + "," + site + "," + "true" };
                     fh.WriteDataToTXT(thelist);
                 }
                 
@@ -147,6 +151,7 @@ namespace OBDemoProgram
                         officerList[i].Name = name;
                         officerList[i].Surname = surname;
                         officerList[i].contactNumber = contactNumber;
+                        officerList[i].Site = site;
                         officerList[i].active = "true";
                         break;
                     }
@@ -155,7 +160,7 @@ namespace OBDemoProgram
                 List<string> theList = new List<string>();
                 foreach (OfficerClass item in officerList)
                 {
-                    theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.ContactNumber + "," + item.active);
+                    theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.ContactNumber + "," + item.Site + "," + item.active);
                 }
 
                 fh.RewriteDataToTXT(theList);
@@ -186,7 +191,7 @@ namespace OBDemoProgram
                 List<string> theList = new List<string>();
                 foreach (OfficerClass item in officerList)
                 {
-                    theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.ContactNumber + "," + item.active);
+                    theList.Add(item.PSiRA + "," + item.Name + "," + item.Surname + "," + item.ContactNumber + "," + item.Site + "," + item.active);
                 }
 
                 fh.RewriteDataToTXT(theList);

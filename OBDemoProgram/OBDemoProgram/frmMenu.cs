@@ -19,11 +19,12 @@ namespace OBDemoProgram
         {
             InitializeComponent();
         }
+    
 
         public void RankExecution()
         {
-            switch (personClassMenu.Rank)
-            {
+           switch (personClassMenu.Rank)
+           {
                 case 0:
                     {
                         btnAdminPanel.Hide();
@@ -36,7 +37,7 @@ namespace OBDemoProgram
                     {
                         btnAdminPanel.Hide();
                         tempFrmHolder.Hide();
-                    }
+                   }
                     break;
                 case 2:
                     {
@@ -47,13 +48,13 @@ namespace OBDemoProgram
                     break;
             }
         }
-
+       
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             tempFrmHolder.Show();
             this.Close();
         }
-
+       
         private void btnNewOB_Click(object sender, EventArgs e)
         {
             ConstantClass.Programflow = 1;
@@ -63,7 +64,7 @@ namespace OBDemoProgram
             frmOB.Show();
             this.Hide();
         }
-
+       
         private void btnAdminPanel_Click(object sender, EventArgs e)
         {
             frmAdminPanel frmAdmin = new frmAdminPanel();
@@ -71,9 +72,9 @@ namespace OBDemoProgram
             frmAdmin.menu = (frmMenu)Form.ActiveForm;
             frmAdmin.Show();
             this.Hide();
-
+       
         }
-
+       
         private void btnOBList_Click(object sender, EventArgs e)
         {
             ConstantClass.Programflow = 2;

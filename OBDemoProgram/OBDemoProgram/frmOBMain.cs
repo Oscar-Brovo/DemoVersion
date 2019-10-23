@@ -29,7 +29,7 @@ namespace OBDemoProgram
 
         private void frmOBMain_Load(object sender, EventArgs e)
         {
-            ReloadOBForm();
+             ReloadOBForm();
         }
 
         public void ReloadOBForm()

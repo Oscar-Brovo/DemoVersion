@@ -99,6 +99,7 @@ namespace OBDemoProgram
             txtOfficerName.Text = ""; 
             txtOfficerSurname.Text = "";
             txtOfficerConNum.Text = "";
+            txtSite.Text = "";
             lstOfficers.SelectedIndex = -1;
             btnLogOfficer.Text = "Add New Officer";
         }
@@ -119,6 +120,7 @@ namespace OBDemoProgram
                 officerClass.PSiRA = txtOfficerPSiRA.Text;
                 officerClass.Name = txtOfficerName.Text;
                 officerClass.Surname = txtOfficerSurname.Text;
+                officerClass.Site = txtSite.Text;
                 officerClass.ContactNumber = txtOfficerConNum.Text;
                 if (btnLogOfficer.Text == "Add New Officer")
                 {
@@ -179,6 +181,7 @@ namespace OBDemoProgram
                 txtOfficerName.Text = officer.Name;
                 txtOfficerSurname.Text = officer.Surname;
                 txtOfficerConNum.Text = officer.ContactNumber;
+                txtSite.Text = officer.Site;
                 btnLogOfficer.Text = "Update Officer";
             }
 
@@ -528,8 +531,12 @@ namespace OBDemoProgram
         }
 
 
+
         #endregion
 
-        
+        private void txtSite_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
