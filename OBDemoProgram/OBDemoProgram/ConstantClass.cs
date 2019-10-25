@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OBDemoProgram
 {
@@ -13,7 +14,8 @@ namespace OBDemoProgram
 
         public static int Programflow = 0;
 
-        public static string OBFileName = DateTime.Now.ToString("MM/yyyy") + "OBList";
+        public static string OBFileName = DateTime.Now.ToString("MM-yyyy") + "_OBList.csv";
+       
 
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
+using System.Windows;
 
 namespace OBDemoProgram
 {
@@ -111,23 +113,21 @@ namespace OBDemoProgram
                 else
                 {
                     stream = new FileStream(this.filePath, FileMode.Create, FileAccess.Write);
-                    // stream = new FileStream("Problem.txt", FileMode.Open, FileAccess.Read);
                     reader = new StreamReader(stream);
-                    //return null;
 
                 }
             }
             catch (System.Exception)
             {
-
                 return null;
             }
             finally
             {
                 try
                 {
-                    reader.Close();
                     stream.Close();
+                    reader.Close();
+                    
                 }
                 catch (System.Exception)
                 {
