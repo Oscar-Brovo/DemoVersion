@@ -14,7 +14,6 @@ namespace OBDemoProgram
     {
         public frmMenu menu;
         public PersonClass personClassAdminForm;
-
         private frmOBMain obmain;
 
 

@@ -73,7 +73,7 @@ namespace OBDemoProgram
         public void PopulateOBList()
         {
             obList = new List<OcurranceBookClass>();
-            FileHandler fh = new FileHandler("OBList.csv");
+            FileHandler fh = new FileHandler(ConstantClass.OBFileName);
             List<string> theList = fh.ReadDataFromTXT();
             if (theList!=null)
             {
@@ -122,7 +122,7 @@ namespace OBDemoProgram
 
         public bool RecordEntry(string InsertOrUpdate)
         {
-            FileHandler fh = new FileHandler("OBList.csv");
+            FileHandler fh = new FileHandler(ConstantClass.OBFileName);
             List<string> theList = new List<string>();
 
             if(InsertOrUpdate == "updated")

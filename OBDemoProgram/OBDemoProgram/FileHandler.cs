@@ -124,8 +124,16 @@ namespace OBDemoProgram
             }
             finally
             {
-                reader.Close();
-                stream.Close();
+                try
+                {
+                    reader.Close();
+                    stream.Close();
+                }
+                catch (System.Exception)
+                {
+
+                    
+                }
             }
 
             return dataRaw;

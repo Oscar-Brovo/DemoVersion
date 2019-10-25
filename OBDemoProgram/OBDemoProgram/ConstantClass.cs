@@ -13,5 +13,7 @@ namespace OBDemoProgram
 
         public static int Programflow = 0;
 
+        public static string OBFileName = DateTime.Now.ToString("MM/yyyy") + "OBList";
+
     }
 }
