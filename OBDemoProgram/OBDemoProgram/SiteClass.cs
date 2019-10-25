@@ -60,6 +60,10 @@ namespace OBDemoProgram
             {
                 return siteName;
             }
+            if (ConstantClass.ToStringType == "AdminCombo")
+            {
+                return callsighn;
+            }
 
             return "Error";
         }
@@ -82,6 +86,20 @@ namespace OBDemoProgram
             }
 
             return siteList;
+        }
+
+        public List<SiteClass> GetActiveSites()
+        {
+            GetSiteData();
+            List<SiteClass> siteActiveList = new List<SiteClass>();
+            foreach (SiteClass item in siteList)
+            {
+                if (item.Active=="true")
+                {
+                    siteActiveList.Add(item);
+                }
+            }
+            return siteActiveList;
         }
 
         public bool DoesSiteExsit()

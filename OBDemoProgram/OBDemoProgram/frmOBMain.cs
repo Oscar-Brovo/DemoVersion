@@ -18,9 +18,10 @@ namespace OBDemoProgram
         public PersonClass personClassAdminForm;
         public OcurranceBookClass OBEntry = new OcurranceBookClass();
         public string toStringDisplay = "OBMain";
+        OfficerClass theOfficerClass = new OfficerClass();
 
-        public List<SiteClass> siteCmbList = new List<SiteClass>();
-        public List<OfficerClass> officerCmbList = new List<OfficerClass>();
+       SiteClass siteCmbTemp = new SiteClass();
+        public OfficerClass officerCmbTemp = new OfficerClass();
 
         public frmOBMain()
         {
@@ -199,8 +200,23 @@ namespace OBDemoProgram
             txtDate.Text = OBEntry.DateAndTime.Split('#')[0];
             cmbOccurence.SelectedIndex = cmbOccurence.FindStringExact(OBEntry.Occurence);
             cmbShift.SelectedIndex = cmbShift.FindString(OBEntry.Shifts);
+
+            cmbSite.DataSource = siteCmbTemp.GetActiveSites();
+            cmbOfficer.DataSource = officerCmbTemp.getActiveOfficers();
             int finalIndex = -1;
+
             int index = 0;
+            foreach (SiteClass item in cmbSite.Items)
+            {
+                if (item.Callsighn == OBEntry.Site)
+                {
+                    finalIndex = index;
+                }
+                index++;
+            }
+            cmbSite.SelectedIndex = finalIndex;
+
+            index = 0;
             foreach (OfficerClass item in cmbOfficer.Items)
             {
                 if (item.PSiRA == OBEntry.Officer.ToString())
@@ -210,17 +226,7 @@ namespace OBDemoProgram
                 index++;
             }
             cmbOfficer.SelectedIndex = finalIndex;
-            index = 0;
-            foreach (SiteClass item in cmbSite.Items)
-            {
-                if (item.Callsighn == OBEntry.Site)
-                {
-                    finalIndex = index;
-                }
-                index++;
-            }
-
-            cmbSite.SelectedIndex = finalIndex;
+           
             txtOccurenceNote.Text = OBEntry.Notes.Replace("&", Environment.NewLine).Replace("@", ",");
 
             btnLogEntry.Text = "Update Occurrence";
@@ -237,8 +243,28 @@ namespace OBDemoProgram
             }
         }
 
-        
-       
+        private void cmbSite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                SiteClass siteClasstemp = (SiteClass)cmbSite.SelectedItem;
+                List<OfficerClass> notTheList = new List<OfficerClass>();
+
+                foreach (OfficerClass item in theOfficerClass.getActiveOfficers())
+                {
+                    if (item.Site == siteClasstemp.Callsighn)
+                    {
+                        notTheList.Add(item);
+                    }
+                }
+
+                cmbOfficer.DataSource = notTheList;
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
     }
 }
 

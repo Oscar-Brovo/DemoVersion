@@ -85,6 +85,20 @@ namespace OBDemoProgram
             return officerList;
         }
 
+        public List<OfficerClass> getActiveOfficers()
+        {
+            GetOfficerData();
+            List<OfficerClass> thelist = new List<OfficerClass>();
+            foreach (OfficerClass item in officerList)
+            {
+                if (item.Active == "true")
+                {
+                    thelist.Add(item);
+                }
+            }
+            return thelist;
+        }
+
         public bool DoesOfficerExsit()
         {
             int index = 0;

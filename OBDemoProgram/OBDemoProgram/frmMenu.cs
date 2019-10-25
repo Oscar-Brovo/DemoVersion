@@ -33,18 +33,10 @@ namespace OBDemoProgram
                         btnOBList.Hide();
                         this.Close();
                     }break;
-                case 1:
-                    {
-                        btnAdminPanel.Hide();
-                        tempFrmHolder.Hide();
-                   }
-                    break;
-                case 2:
+                default:
                     {
                         tempFrmHolder.Hide();
                     }
-                    break;
-                default:
                     break;
             }
         }

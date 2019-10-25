@@ -149,6 +149,7 @@
             this.cmbSite.Size = new System.Drawing.Size(181, 24);
             this.cmbSite.TabIndex = 30;
             this.cmbSite.Text = "-";
+            this.cmbSite.SelectedIndexChanged += new System.EventHandler(this.cmbSite_SelectedIndexChanged);
             // 
             // lblSite
             // 

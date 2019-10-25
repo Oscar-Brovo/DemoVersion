@@ -24,7 +24,6 @@ namespace OBDemoProgram
         public frmAdminPanel()
         {
             InitializeComponent();
-            //officerClass.PopulatingList();
         }
 
         public bool testField(string field, int testType = 2) // testType 1 = numbers ,  2 = text type
@@ -72,6 +71,32 @@ namespace OBDemoProgram
             ReloadSiteList();
             ClearPersonTab();
             ReloadPersonList();
+            if (personClassAdminForm.Rank == 1)
+            {
+                tcAdminPanel.TabPages.Remove(tpAddEmployee);
+                // officer
+                txtOfficerPSiRA.Enabled = false;
+                txtOfficerName.Enabled = false;
+                txtOfficerSurname.Enabled = false;
+                txtOfficerConNum.Enabled = false;
+                cmbOfficerSiteName.Enabled = false;
+                btnClearOfficer.Hide();
+                btnLogOfficer.Hide();
+                btnRemoveOfficer.Hide();
+                // Site
+                txtSiteArmed.Enabled = false;
+                txtSiteCallSign.Enabled = false;
+                txtSiteClientName.Enabled = false;
+                txtSiteContactNumber.Enabled = false;
+                txtSiteEmt.Enabled = false;
+                txtSiteFire.Enabled = false;
+                txtSiteName.Enabled = false;
+                txtSiteSaps.Enabled = false;
+                btnSiteClear.Hide();
+                btnSiteLog.Hide();
+                btnSiteRemove.Hide();
+
+            }
         }
 
         #endregion
@@ -94,12 +119,13 @@ namespace OBDemoProgram
 
         public void ClearOfficerTab()
         {
+            ConstantClass.ToStringType = "AdminCombo";
             txtOfficerPSiRA.Text = "";
             txtOfficerPSiRA.Enabled = true;
             txtOfficerName.Text = ""; 
             txtOfficerSurname.Text = "";
             txtOfficerConNum.Text = "";
-            txtSite.Text = "";
+            cmbOfficerSiteName.DataSource = siteClass.GetActiveSites();
             lstOfficers.SelectedIndex = -1;
             btnLogOfficer.Text = "Add New Officer";
         }
@@ -120,7 +146,7 @@ namespace OBDemoProgram
                 officerClass.PSiRA = txtOfficerPSiRA.Text;
                 officerClass.Name = txtOfficerName.Text;
                 officerClass.Surname = txtOfficerSurname.Text;
-                officerClass.Site = txtSite.Text;
+                officerClass.Site = ((SiteClass)cmbOfficerSiteName.SelectedItem).Callsighn;
                 officerClass.ContactNumber = txtOfficerConNum.Text;
                 if (btnLogOfficer.Text == "Add New Officer")
                 {
@@ -181,7 +207,15 @@ namespace OBDemoProgram
                 txtOfficerName.Text = officer.Name;
                 txtOfficerSurname.Text = officer.Surname;
                 txtOfficerConNum.Text = officer.ContactNumber;
-                txtSite.Text = officer.Site;
+                int index = 0;
+                foreach (SiteClass item in cmbOfficerSiteName.Items)
+                {
+                    if (item.Callsighn == officer.Site)
+                    {
+                        cmbOfficerSiteName.SelectedIndex = index;
+                    }
+                    index++;
+                }
                 btnLogOfficer.Text = "Update Officer";
             }
 
@@ -241,10 +275,10 @@ namespace OBDemoProgram
             txtSiteName.Text = "";
             txtSiteClientName.Text = "";
             txtSiteContactNumber.Text = "";
-            txtEmt.Text = "";
-            txtFire.Text = "";
-            txtArmed.Text = "";
-            txtSaps.Text = "";
+            txtSiteEmt.Text = "";
+            txtSiteFire.Text = "";
+            txtSiteArmed.Text = "";
+            txtSiteSaps.Text = "";
             lstSitesList.SelectedIndex = -1;
             btnSiteLog.Text = "Add New Site";
         }
@@ -264,10 +298,10 @@ namespace OBDemoProgram
                 siteClass.Callsighn = txtSiteCallSign.Text;
                 siteClass.SiteName = txtSiteName.Text;
                 siteClass.ClientName = txtSiteClientName.Text;
-                siteClass.Emt = txtEmt.Text;
-                siteClass.Fire = txtFire.Text;
-                siteClass.Armed = txtArmed.Text;
-                siteClass.Saps = txtSaps.Text;
+                siteClass.Emt = txtSiteEmt.Text;
+                siteClass.Fire = txtSiteFire.Text;
+                siteClass.Armed = txtSiteArmed.Text;
+                siteClass.Saps = txtSiteSaps.Text;
                 siteClass.CleintContactNr = txtSiteContactNumber.Text;
                 if (btnSiteLog.Text == "Add New Site")
                 {
@@ -327,10 +361,10 @@ namespace OBDemoProgram
                 txtSiteName.Text = site.SiteName;
                 txtSiteClientName.Text = site.ClientName;
                 txtSiteContactNumber.Text = site.CleintContactNr;
-                txtEmt.Text = site.Emt;
-                txtFire.Text = site.Fire;
-                txtArmed.Text = site.Armed;
-                txtSaps.Text = site.Saps;
+                txtSiteEmt.Text = site.Emt;
+                txtSiteFire.Text = site.Fire;
+                txtSiteArmed.Text = site.Armed;
+                txtSiteSaps.Text = site.Saps;
                 btnSiteLog.Text = "Update Site";
             }
         }
@@ -534,9 +568,8 @@ namespace OBDemoProgram
 
         #endregion
 
-        private void txtSite_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
+
+// fix 3 txtsit errors
